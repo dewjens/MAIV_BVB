@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billboards By Boijmans</title>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAUCTqRNa9qdPJT31pXeJJQLUUSNNQdw6A",
+        authDomain: "billboardsbyboijmans.firebaseapp.com",
+        databaseURL: "https://billboardsbyboijmans.firebaseio.com",
+        projectId: "billboardsbyboijmans",
+        storageBucket: "billboardsbyboijmans.appspot.com",
+        messagingSenderId: "930811275069"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script>
        WebFontConfig = {
            google: {
@@ -34,6 +47,7 @@
     <main>
       <article class="main-article">
         Billboards By boijmans
+        <div id="reactcontent"></div>
       </article>
     </main>
     <footer>

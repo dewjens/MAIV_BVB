@@ -22,12 +22,11 @@ const InfoComponent = () => {
           <article>
             <img src="./assets/img/headerimg.png" alt="billboards"/>
           </article>
-
-          <p className="howTo">Hoe ga je te werk?</p>
         </section>   
-
         
         <section className="scanBillboard width">
+          <p className="howTo">Hoe ga je te werk?</p>
+
           <article className="scanBillboardtxt txt">
             <h3 className="title_black">Scan een van onze billboards</h3>
             <p>Hoe doe je mee? Onze billboards staan verspreid over de hele stad. Op ieder billboard staat een QR-code die gescanned kan worden met jouw telefoon. Heb je geen QR-scanner? Surf dan naar ... om direct te beginnen!</p>

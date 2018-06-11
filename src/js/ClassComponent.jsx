@@ -5,7 +5,6 @@ import HeaderComponent from './HeaderComponent.jsx';
 
 class ClassComponent extends Component {
 
-
   constructor(props){
     super(props);
     this.testobject  = {"a":"1"}
@@ -33,7 +32,7 @@ class ClassComponent extends Component {
 
 
       <HeaderComponent />
-
+  
     )
   }
 

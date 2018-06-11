@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billboards By Boijmans</title>
+    <script>
+       WebFontConfig = {
+           google: {
+             families: ['mexcellent'],
+             urls: ['assets/fonts/mexcellent/mexcellent.css']
+           }
+       };
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+          wf.async = true;
+          s.parentNode.insertBefore(wf, s);
+       })(document);
+    </script>
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -17,19 +31,7 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script>
-       WebFontConfig = {
-           google: {
-             families: ['Vollkorn:400,700']
-           }
-       };
-       (function(d) {
-          var wf = d.createElement('script'), s = d.scripts[0];
-          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-          wf.async = true;
-          s.parentNode.insertBefore(wf, s);
-       })(document);
-    </script>
+
   </head>
   <body>
     <div id="reactcontent"></div>

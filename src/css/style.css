@@ -68,7 +68,13 @@ body {
 }
 
 .link-1 {
+
+
   &::before {
+    content:"";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
     background-image: url('../assets/img/marker.svg');
   }
 }

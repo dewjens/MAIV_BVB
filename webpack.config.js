@@ -7,6 +7,8 @@ const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const merge = require("webpack-merge");
 const parts = require("./webpack.parts");
 
+const webpack = require("webpack");
+
 const port = 3000;
 
 const PATHS = {
@@ -78,6 +80,7 @@ const commonConfig = merge([
       ]
     },
     plugins: [
+      new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         template: "./src/index.html"
       })
@@ -103,7 +106,9 @@ const developmentConfig = merge([
   {
     devServer: {
       overlay: true,
-      contentBase: PATHS.src
+      contentBase: PATHS.src,
+      hot: true,
+      historyApiFallback: true
     }
   },
   parts.loadCSS(),

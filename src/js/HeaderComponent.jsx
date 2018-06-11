@@ -4,6 +4,7 @@ import Locatie from './LocatieComponent.jsx';
 import Kunstwerken from './KunstwerkenComponent.jsx';
 import QRScanner from './QRScannerComponent.jsx';
 import Info from './InfoComponent.jsx';
+import Home from './HomeComponent.jsx'
 
 
 const HeaderComponent = () => {
@@ -19,6 +20,7 @@ const HeaderComponent = () => {
           </ul>
         </nav>
 
+<<<<<<< HEAD
       <Switch>
         <Route path="/" exact/>
         <Route path="/locaties" component={Locatie} />
@@ -26,6 +28,16 @@ const HeaderComponent = () => {
         <Route path="/qrscanner" component={QRScanner} />
         <Route path="/info" component={Info} />
       </Switch>
+=======
+        <Switch>
+          <Route path="/" exact render={() =>  <Home />} />
+
+          <Route path="/locaties" component={Locatie} />
+          <Route path="/kunstwerken" component={Kunstwerken} />
+          <Route path="/qrscanner" component={QRScanner} />
+          <Route path="/info" component={Info} />
+        </Switch>
+>>>>>>> htmlskelet home
       </header>
     </Router>
 

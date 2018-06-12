@@ -45,6 +45,8 @@
   },
   "dependencies": {
     "mapbox-gl": "^0.45.0",
+    "mobx": "^5.0.2",
+    "mobx-react": "^5.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-qr-reader": "^2.1.0",

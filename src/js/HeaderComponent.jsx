@@ -5,6 +5,7 @@ import Kunstwerken from './KunstwerkenComponent.jsx';
 import QRScanner from './QRScannerComponent.jsx';
 import Info from './InfoComponent.jsx';
 import Home from './HomeComponent.jsx'
+import Billboard from './Billboard.jsx'
 
 
 const HeaderComponent = () => {
@@ -13,20 +14,22 @@ const HeaderComponent = () => {
       <header>
         <nav className="nav-mobile">
           <ul className="nav-list-mobile">
-            <li><Link className="nav-link-mobile" to="/">Home</Link></li>
-            <li><Link className="nav-link-mobile" to="/locaties">Locaties</Link></li>
-            <li><Link className="nav-link-mobile" to="/qrscanner">beginnen</Link></li>
-            <li><Link className="nav-link-mobile" to="/kunstwerken">Werken</Link></li>
-            <li><Link className="nav-link-mobile" to="/info">Info</Link></li>
+            <li className="nav-li"><Link className="nav-link-mobile nav-link-mobile-1 nav-link" to="/">Home</Link></li>
+            <li className="nav-li"><Link className="nav-link-mobile nav-link-mobile-2 nav-link" to="/locaties">Locaties</Link></li>
+            <li className="nav-li"><Link className="nav-link-mobile nav-link-mobile-3 nav-link" to="/qrscanner">beginnen</Link></li>
+            <li className="nav-li"><Link className="nav-link-mobile nav-link-mobile-4 nav-link" to="/kunstwerken">Werken</Link></li>
+            <li className="nav-li"><Link className="nav-link-mobile nav-link-mobile-5 nav-link" to="/info">Info</Link></li>
           </ul>
         </nav>
       <header className="header-container">
-        <div className="logo-container">
-          <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
-          <h1 className="header-title">billboards by boijmans</h1>
-          <div className="black-stroke"></div>
-          <div className="black-stroke"></div>
-        </div>
+        <Link to="/">
+          <div className="logo-container">
+            <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
+            <h1 className="header-title">billboards by boijmans</h1>
+            <div className="black-stroke"></div>
+            <div className="black-stroke"></div>
+          </div>
+        </Link>
         <nav className="nav-container">
           <ul className="nav-list">
             <li><Link className="nav-link link-1" to="/locaties">Locaties</Link></li>
@@ -43,6 +46,10 @@ const HeaderComponent = () => {
           <Route path="/kunstwerken" component={Kunstwerken} />
           <Route path="/qrscanner" component={QRScanner} />
           <Route path="/info" component={Info} />
+
+          <Route
+            path="/billboard" component={Billboard}
+          />
         </Switch>
       </header>
     </HashRouter>

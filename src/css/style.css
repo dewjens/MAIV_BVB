@@ -27,8 +27,8 @@ body {
   height: 10rem;
   position: fixed;
   width: 100vw;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: 99;
   background-color: white;
 }
@@ -346,6 +346,7 @@ h3 {
   padding-bottom: 5rem;
   background-image: url(../assets/img/headerbg.svg);
   background-position: right;
+  margin-top: 10rem;
 
   & h2 {
     text-transform: uppercase;
@@ -357,6 +358,7 @@ h3 {
   margin-top: 5rem;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .kunstwerk {
@@ -387,6 +389,12 @@ h3 {
   margin-top: 0;
   padding: 1rem 2rem;
   border: .5rem solid white;
+}
+
+/* QRREADER */
+
+.qrreader {
+  display: none;
 }
 
 @media (max-width: 1100px) {
@@ -449,6 +457,10 @@ h3 {
 
   .header {
     margin-top: 0;
+  }
+
+  .qrreader {
+    display: block;
   }
 }
 

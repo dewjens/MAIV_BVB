@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import HeaderComponent from './HeaderComponent.jsx';
 
-
 class ClassComponent extends Component {
 
 

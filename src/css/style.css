@@ -57,7 +57,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #4F4F4F;
+  color: #4f4f4f;
   font-weight: bold;
 }
 
@@ -71,7 +71,7 @@ body {
 .link-1 {
 
   &::before {
-    content:"";
+    content: '';
     width: 2rem;
     height: 2rem;
     position: absolute;

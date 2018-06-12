@@ -1,15 +1,25 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import {Route, Link, Switch, HashRouter } from 'react-router-dom'
 import Locatie from './LocatieComponent.jsx';
 import Kunstwerken from './KunstwerkenComponent.jsx';
 import QRScanner from './QRScannerComponent.jsx';
 import Info from './InfoComponent.jsx';
+import Home from './HomeComponent.jsx'
 
 
 const HeaderComponent = () => {
   return (
-    <Router>
-      <div>
+    <HashRouter>
+      <header>
+        <nav className="nav-mobile">
+          <ul className="nav-list-mobile">
+            <li><Link className="nav-link-mobile" to="/">Home</Link></li>
+            <li><Link className="nav-link-mobile" to="/locaties">Locaties</Link></li>
+            <li><Link className="nav-link-mobile" to="/qrscanner">beginnen</Link></li>
+            <li><Link className="nav-link-mobile" to="/kunstwerken">Werken</Link></li>
+            <li><Link className="nav-link-mobile" to="/info">Info</Link></li>
+          </ul>
+        </nav>
       <header className="header-container">
         <div className="logo-container">
           <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
@@ -26,17 +36,16 @@ const HeaderComponent = () => {
           </ul>
         </nav>
         </header>
+        <Switch>
+          <Route path="/" exact render={() =>  <Home />} />
 
-      <Switch>
-        <Route path="/" exact/>
-        <Route path="/locaties" component={Locatie} />
-        <Route path="/kunstwerken" component={Kunstwerken} />
-        <Route path="/qrscanner" component={QRScanner} />
-        <Route path="/info" component={Info} />
-      </Switch>
-      </div>
-
-    </Router>
+          <Route path="/locaties" component={Locatie} />
+          <Route path="/kunstwerken" component={Kunstwerken} />
+          <Route path="/qrscanner" component={QRScanner} />
+          <Route path="/info" component={Info} />
+        </Switch>
+      </header>
+    </HashRouter>
 
   );
 }

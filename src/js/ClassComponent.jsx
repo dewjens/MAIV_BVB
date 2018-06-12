@@ -7,10 +7,7 @@ class ClassComponent extends Component {
 
   render(){
     return (
-
-
       <HeaderComponent />
-
     )
   }
 

@@ -24,6 +24,10 @@ class QRScannerComponent extends Component {
   render(){
     return(
       <div>
+        <section className="pagHeader">
+          <h2>Bezoek deze pagina met je smartphone voor de volledige beleving!ompleet zijn door jullie</h2>
+        </section>
+
         <QrReader
           delay={this.state.delay}
           onError={this.handleError}

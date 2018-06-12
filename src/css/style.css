@@ -167,9 +167,10 @@ span {
 
 h3 {
   margin-bottom: 3rem;
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 1rem 3rem;
   display: inline-block;
+  font-family: mexcellent;
 }
 
 .nav-mobile {

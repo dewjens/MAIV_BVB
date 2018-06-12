@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-
+import Kunstwerk from './Kunstwerk.jsx';
 
 const InfoComponent = () => {
   return (
@@ -86,6 +86,13 @@ const InfoComponent = () => {
 
           <article className="spotlight">
             <h3>Deze werken komen al in het museum</h3>
+
+            <section className="kunstwerken">
+              <Kunstwerk />
+              <Kunstwerk />
+              <Kunstwerk />
+              <Kunstwerk />
+            </section>
 
             <Link to="/kunstwerken"><a className="button button_wit">Ontdek ze allemaal</a></Link>
           </article>

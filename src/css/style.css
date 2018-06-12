@@ -92,7 +92,6 @@ h3 {
   display: flex;
   position: relative;
   align-items: center;
-  position: relative;
   overflow: hidden;
   padding-top: 15rem;
   padding-bottom: 10rem;
@@ -123,7 +122,7 @@ h3 {
 }
 
 .scanBillboard {
-  background-image: url('../assets/img/dotsbg.png');
+  background-image: url(../assets/img/dotsbg.png);
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -214,3 +213,57 @@ h3 {
     display: inline-block;
   } */
 }
+
+/* KUNSTWERKEN */
+
+.pagHeader {
+  background-color: var(--main-color);
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-image: url(../assets/img/headerbg.svg);
+  background-position: right;
+
+  & h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.kunstwerken {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.kunstwerk {
+  position: relative;
+  text-align: center;
+
+  & img {
+    border-radius: 1rem;
+  }
+}
+
+.kunstwerkInfo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.kunstwerkName {
+  text-align: center;
+  margin-top: -5rem;
+}
+
+.kunstwerk_button {
+  background-color: var(--main-color);
+  color: black;
+  margin-top: 0;
+  padding: 1rem 2rem;
+  border: .5rem solid white;
+}
+
+

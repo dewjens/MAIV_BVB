@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import {Route, Link, Switch, HashRouter } from 'react-router-dom'
 import Locatie from './LocatieComponent.jsx';
 import Kunstwerken from './KunstwerkenComponent.jsx';
 import QRScanner from './QRScannerComponent.jsx';
@@ -9,7 +9,7 @@ import Home from './HomeComponent.jsx'
 
 const HeaderComponent = () => {
   return (
-    <Router>
+    <HashRouter>
       <header>
         <nav>
           <ul>
@@ -29,7 +29,7 @@ const HeaderComponent = () => {
           <Route path="/info" component={Info} />
         </Switch>
       </header>
-    </Router>
+    </HashRouter>
 
   );
 }

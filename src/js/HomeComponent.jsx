@@ -54,7 +54,7 @@ const InfoComponent = () => {
           <article className="kunstenaarVrijtxt txt">
             <h3 className="title_geel">Laat de kunstenaar in je vrij</h3>
             <p>Zodra je een deel van het kunstwerk hebt uitgekozen om mee te werken, kan je die naar jouw wens aanpassen en op het canvas plaatsen. Wanneer het canvas klaar is, zal het worden opgeslagen en zal het, wanneer het zover is, tentoongesteld worden bij de heropening van het museum.
-            
+           
             <br/>
             <span>Waar wacht je nog op? Pak snel je telefoon!</span>
             </p>

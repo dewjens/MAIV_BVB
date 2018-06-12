@@ -25,6 +25,12 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10rem;
+  position: fixed;
+  width: 100vw;
+  top:0;
+  left:0;
+  z-index: 99;
+  background-color: white;
 }
 
 .logo-container {
@@ -417,6 +423,32 @@ h3 {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .nav-mobile {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    height: 10rem;
+  }
+
+  .nav-list-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .header-container {
+    display: none;
+  }
+
+  .header {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 700px) {
@@ -444,7 +476,6 @@ h3 {
   .nav {
     display: none;
   }
-
 }
 
 @media (max-width: 600px) {

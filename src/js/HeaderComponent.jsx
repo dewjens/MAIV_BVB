@@ -11,12 +11,13 @@ const HeaderComponent = () => {
   return (
     <HashRouter>
       <header>
-        <nav class="nav-mobile">
-          <ul>
-            <li><Link to="/locaties">Locaties</Link></li>
-            <li><Link to="/kunstwerken">Kunstwerken</Link></li>
-            <li><Link to="/qrscanner">QR Scanner</Link></li>
-            <li><Link to="/info">Info</Link></li>
+        <nav className="nav-mobile">
+          <ul className="nav-list-mobile">
+            <li><Link className="nav-link-mobile" to="/">Home</Link></li>
+            <li><Link className="nav-link-mobile" to="/locaties">Locaties</Link></li>
+            <li><Link className="nav-link-mobile" to="/qrscanner">beginnen</Link></li>
+            <li><Link className="nav-link-mobile" to="/kunstwerken">Werken</Link></li>
+            <li><Link className="nav-link-mobile" to="/info">Info</Link></li>
           </ul>
         </nav>
       <header className="header-container">

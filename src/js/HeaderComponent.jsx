@@ -10,6 +10,15 @@ import Home from './HomeComponent.jsx'
 const HeaderComponent = () => {
   return (
     <Router>
+      <header>
+        <nav class="nav-mobile">
+          <ul>
+            <li><Link to="/locaties">Locaties</Link></li>
+            <li><Link to="/kunstwerken">Kunstwerken</Link></li>
+            <li><Link to="/qrscanner">QR Scanner</Link></li>
+            <li><Link to="/info">Info</Link></li>
+          </ul>
+        </nav>
       <div>
       <header className="header-container">
         <div className="logo-container">

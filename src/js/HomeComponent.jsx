@@ -19,7 +19,7 @@ const InfoComponent = () => {
             <Link to="/kunstwerken"><a className="secondLink">of bekijk de reeds gemaakte werken</a></Link>
           </article>
 
-          <picture class="headerpicture">
+          <picture className="headerpicture">
             <img src="./assets/img/headerimg.png" alt="billboards"/>
           </picture>
         </section>
@@ -34,7 +34,7 @@ const InfoComponent = () => {
             <Link to="/qrscanner"><a className="button button_geel">Gebruik onze QR-scanner</a></Link>
           </article>
 
-          <picture class="scanpicture">
+          <picture className="scanpicture">
             <img src="./assets/img/scanimg.png" alt="scan een qr code"/>
           </picture>
         </section>
@@ -60,7 +60,7 @@ const InfoComponent = () => {
             </p>
           </article>
 
-          <picture class="kunstenaarpicture">
+          <picture className="kunstenaarpicture">
             <img src="./assets/img/kunstenaarimg.png" alt="kunstenaar"/>
           </picture>
         </section>
@@ -69,7 +69,7 @@ const InfoComponent = () => {
           <h3 className="title_wit">word deel van Boijmans billboard collectie</h3>
 
           <div className="wordDeel">
-            <picture class="collectiepicture">
+            <picture className="collectiepicture">
               <img src="./assets/img/collectieimg.png" alt="collectie"/>
             </picture>
 

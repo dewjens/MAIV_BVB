@@ -9,11 +9,6 @@ class Store {
         this.addPost(new Onboard( ));
     }
 
-    addPost = (post, callback) => {
-        this.posts.push(post);
-        console.log(post.id);
-    }
-
 }
 
 decorate(Store, {

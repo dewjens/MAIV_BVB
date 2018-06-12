@@ -24,6 +24,8 @@ class BillboardComponent extends Component{
 
       , currentPage: 1
     }
+
+    this.handleNext = this.handleNext.bind(this)
   }
 
   // componentDidMount() {
@@ -36,10 +38,10 @@ class BillboardComponent extends Component{
     this.setState({onboarding:data});
   }
 
-  handleNext() {
-    console.log("next");
+  handleNext(page) {
+    console.log(page);
 
-    this.setState({ currentPage: this.state.currentPage + 1 });
+    this.setState({ currentPage: page });
   }
 
   render() {

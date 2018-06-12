@@ -56,7 +56,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #4F4F4F;
+  color: #4f4f4f;
   font-weight: bold;
 }
 
@@ -69,12 +69,100 @@ body {
 
 .link-1 {
 
+  &::before {
+    content:"";
+    width: 1.9rem;
+    height: 2.9rem;
+    position: absolute;
+    background-image: url('../assets/img/marker.svg');
+    margin-left: -3rem;
+  }
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  &:hover::before {
+    background-image: url('../assets/img/marker-yellow.svg');
+  }
+}
+
+.link-2 {
+
+  &::before {
+    content:"";
+    width: 2.1rem;
+    height: 2.9rem;
+    position: absolute;
+    background-image: url('../assets/img/artwork.svg');
+    margin-left: -3rem;
+  }
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  &:hover::before {
+    background-image: url('../assets/img/artwork-yellow.svg');
+  }
+
+
+}
+
+.link-3 {
 
   &::before {
     content:"";
     width: 2rem;
     height: 2rem;
     position: absolute;
-    background-image: url('../assets/img/marker.svg');
+    background-image: url('../assets/img/qr-code.svg');
+    margin-left: -3rem;
+  }
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  &:hover::before {
+    background-image: url('../assets/img/qr-code-yellow.svg');
+  }
+}
+
+.link-4 {
+
+  &::before {
+    content:"";
+    width: 2.3rem;
+    height: 2.3rem;
+    position: absolute;
+    background-image: url('../assets/img/info.svg');
+    margin-left: -3rem;
+  }
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  &:hover::before {
+    background-image: url('../assets/img/info-yellow.svg');
+  }
+}
+
+@media(width <= 1055px) {
+  .nav-link {
+    font-size: 1.6rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-img {
+    width: 10%;
+  }
+
+  .nav-container {
+    width: 50rem;
   }
 }

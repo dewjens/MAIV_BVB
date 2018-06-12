@@ -480,9 +480,7 @@ h3 {
   position: relative;
   padding-top: 1rem;
   overflow: hidden;
-  background-image: url(../assets/img/onboardingbg.svg);
   background-repeat: no-repeat;
-  background-position: bottom left;
 
   & h4 {
     text-transform: uppercase;
@@ -494,6 +492,30 @@ h3 {
   & p {
     padding: 0 3vw;
   }
+}
+
+.onboarding1 {
+  background-image: url(../assets/img/onboardingbg1.svg);
+  background-position: bottom left;
+}
+
+.onboarding2 {
+  background-image: url(../assets/img/onboardingbg2.svg);
+  background-position: top left;
+}
+
+.onboarding3 {
+  background-image: url(../assets/img/onboardingbg3.svg);
+  background-position: bottom right;
+}
+
+.onboardingtxt {
+  position: absolute;
+  bottom: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .onboardingSkip {
@@ -510,7 +532,7 @@ h3 {
   margin-top: 5rem;
   width: 100vw;
   position: absolute;
-  bottom: 15rem;
+  bottom: 20vh;
 }
 
 .arrowBack {

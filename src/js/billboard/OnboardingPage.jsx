@@ -18,14 +18,16 @@ const OnboardingPage = ({onboarding, currentPage, onNext}) => {
   }
 
   return (
-    <div className="onboarding">
+    <div className={"onboarding onboarding" + currentPage}>
       <img src="./assets/img/arrow_back.png" alt="back arrow" className={"arrowBack" + (currentPage===1 ? " hidden" : "")} onClick={() => handleBack()}/>
       <img src="./assets/img/boijmans-logo.png" alt="logo"/>
 
       <section>
-        <img src={"./assets/img/onboarding"+currentPage+".png"} alt=""/>
-        <h4>{onboarding[currentPage].title}</h4>
-        <p>{onboarding[currentPage].tekst}</p>
+        <img src={"./assets/img/onboarding"+currentPage+".png"} alt="onboarding"/>
+        <article className="onboardingtxt">
+          <h4>{onboarding[currentPage].title}</h4>
+          <p>{onboarding[currentPage].tekst}</p>
+        </article>
       </section>
 
       <section className="onboardingBottom">

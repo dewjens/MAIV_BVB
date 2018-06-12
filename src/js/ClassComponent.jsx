@@ -10,7 +10,7 @@ class ClassComponent extends Component {
 
 
       <HeaderComponent />
-
+  
     )
   }
 

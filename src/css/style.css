@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  font-size: 2rem;
-  font-family: arial, sans-serif;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.3;
   font-weight: var(--weight-regular);
   color: var(--text-color);
@@ -77,4 +77,201 @@ body {
     position: absolute;
     background-image: url('../assets/img/marker.svg');
   }
+}
+
+br {
+  line-height: 4rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+h3 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  padding: 1rem 3rem;
+  display: inline-block;
+}
+
+.title_black {
+  background-color: black;
+  color: white;
+}
+
+.title_geel {
+  background-color: var(--main-color);
+  color: black;
+}
+
+.title_wit {
+  background-color: white;
+  color: black;
+}
+
+.width { 
+  padding: 5rem 5vw;
+}
+
+.txt {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 50vw;
+} 
+
+.button {
+  padding: 1.5rem 2.5rem;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  margin-top: 5rem;
+
+  font-weight: bold;
+  font-size: 1.6rem;
+  border-radius: 5rem;
+  color: black;
+}
+
+.button_wit {
+  background-color: white;
+}
+
+.button_geel {
+  background-color: var(--main-color);
+}
+
+.secondLink {
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  margin-top: 2rem;
+}
+
+.header {
+  background-color: var(--main-color);
+  display: flex;
+  position: relative;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  background-image: url(../assets/img/headerbgtop.png), url(../assets/img/headerbgbot.png), url(../assets/img/hoekje.svg);
+  background-position: left -2%, left 105%, 5% 15%;
+  background-repeat: no-repeat;
+  background-blend-mode: color-burn;
+
+  & h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  & img {
+    position: absolute;
+    right: -5rem;
+    bottom: 10%;
+  }
+
+}
+
+.headertxt {
+  z-index: 1;
+  margin-left: 5rem;
+  padding-top: 0;
+}
+
+.scanBillboard {
+  background-image: url('../assets/img/dotsbg.png');
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 10rem;
+
+  & img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.howTo {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  background-color: black;
+  color: white;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+}
+
+.scanBillboardtxt {
+  width: 50vw;
+}
+
+.kiesKunststuk {
+  display: flex;
+  color: white;
+  background-color: black;
+  text-align: right;
+  justify-content: space-between;
+  background-image: url(../assets/img/lines_white.png);
+  background-position: 95% 170%;
+  background-repeat: no-repeat
+}
+
+.kunstenaarVrij {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../assets/img/dotsbg.png);
+  align-items: center;
+  position: relative;
+  /* overflow: hidden; */
+  padding-bottom: 15rem;
+
+  & img {
+    position: absolute;
+    bottom: -7rem;
+    right: 0;
+    padding-top: 10rem;
+  }
+}
+
+.boijmansCollectie {
+  background-color: var(--main-color);
+  padding-top: 10rem;
+  background-image: url(../assets/img/bg_cirkel.svg), url(../assets/img/bg_cirkel2.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -50rem right, left top;
+  
+
+  & h3 {
+    text-align: right;
+  }
+}
+
+.wordDeel {
+  display: flex;
+  justify-content: space-between;
+
+  & img {
+    margin-right: 5rem;
+  }
+}
+
+.spotlight {
+  text-align: center;
+  margin-top: 5rem;
+
+  & h3 {
+    text-align: center;
+    display: block;
+  }
+
+  /* & a {
+    text-align: center;
+    display: inline-block;
+  } */
 }

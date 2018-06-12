@@ -19,7 +19,6 @@ const HeaderComponent = () => {
             <li><Link to="/info">Info</Link></li>
           </ul>
         </nav>
-      <div>
       <header className="header-container">
         <div className="logo-container">
           <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>

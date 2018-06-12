@@ -10,16 +10,23 @@ import Home from './HomeComponent.jsx'
 const HeaderComponent = () => {
   return (
     <Router>
-      <header>
-        <nav>
-          <ul>
-            <li><Link to="/locaties">Locaties</Link></li>
-            <li><Link to="/kunstwerken">Kunstwerken</Link></li>
-            <li><Link to="/qrscanner">QR Scanner</Link></li>
-            <li><Link to="/info">Info</Link></li>
+      <div>
+      <header className="header-container">
+        <div className="logo-container">
+          <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
+          <h1 className="header-title">billboards by boijmans</h1>
+          <div className="black-stroke"></div>
+          <div className="black-stroke"></div>
+        </div>
+        <nav className="nav-container">
+          <ul className="nav-list">
+            <li><Link className="nav-link link-1" to="/locaties">Locaties</Link></li>
+            <li><Link className="nav-link link-2" to="/kunstwerken">Kunstwerken</Link></li>
+            <li><Link className="nav-link link-3" to="/qrscanner">QR Scanner</Link></li>
+            <li><Link className="nav-link link-4" to="/info">Info</Link></li>
           </ul>
         </nav>
-
+        </header>
         <Switch>
           <Route path="/" exact render={() =>  <Home />} />
 

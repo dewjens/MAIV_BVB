@@ -116,7 +116,7 @@ body {
 }
 
 .link-3 {
-  
+
   &::before {
     content: '';
     width: 2rem;
@@ -155,24 +155,7 @@ body {
   }
 }
 
-@media(width <= 1055px) {
-  .nav-link {
-    font-size: 1.6rem;
-  }
 
-  .header-title {
-    font-size: 2rem;
-  }
-
-  .header-img {
-    width: 10%;
-  }
-
-  .nav-container {
-    width: 50rem;
-    background-image: url(../assets/img/marker.svg);
-  }
-}
 
 br {
   line-height: 4rem;
@@ -481,6 +464,24 @@ h3 {
 
   .headerpicture {
     right: -3rem;
+  }
+}
+
+@media(width <= 1055px) {
+  .nav-link {
+    font-size: 1.6rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-img {
+    width: 10%;
+  }
+
+  .nav-container {
+    width: 50rem;
   }
 }
 

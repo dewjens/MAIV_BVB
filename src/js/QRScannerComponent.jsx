@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import QrReader from 'react-qr-reader'
-
+import ImageApp from './ImageApp.js';
 
 class QRScannerComponent extends Component {
   constructor(props){
@@ -23,7 +23,9 @@ class QRScannerComponent extends Component {
   }
   render(){
     return(
+
       <div>
+        <ImageApp />
         <section className="pagHeader">
           <h2>Bezoek deze pagina met je smartphone voor de volledige beleving!ompleet zijn door jullie</h2>
         </section>

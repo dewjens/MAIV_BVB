@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import Kunstwerk from './Kunstwerk.jsx';
+import Footer from './FooterComponent.jsx';
 
 const InfoComponent = () => {
   return (
@@ -15,8 +16,8 @@ const InfoComponent = () => {
             <br/>
             <span>JOUW WERK. IN HET MUSEUM</span>.</p>
 
-            <Link to="/locaties"><a className="button button_wit">Ontek de locaties</a></Link>
-            <Link to="/kunstwerken"><a className="secondLink">of bekijk de reeds gemaakte werken</a></Link>
+            <Link className="button button_wit" to="/locaties">Ontek de locaties</Link>
+            <Link className="secondLink" to="/kunstwerken">of bekijk de reeds gemaakte werken</Link>
           </article>
 
           <picture className="headerpicture">
@@ -29,31 +30,31 @@ const InfoComponent = () => {
 
           <article className="scanBillboardtxt txt">
             <h3 className="title_black">Scan een van onze billboards</h3>
-            <p>Hoe doe je mee? Onze billboards staan verspreid over de hele stad. <span class="highlight"> Op ieder billboard staat een QR-code die gescanned kan worden </span> met jouw telefoon. Heb je geen QR-scanner? Surf dan naar ... om direct te beginnen!</p>
+            <p>Hoe doe je mee? Onze billboards staan verspreid over de hele stad. <span className="highlight"> Op ieder billboard staat een QR-code die gescanned kan worden </span> met jouw telefoon. Heb je geen QR-scanner? Surf dan naar ... om direct te beginnen!</p>
 
-            <Link to="/qrscanner"><a className="button button_geel">Gebruik onze QR-scanner</a></Link>
+            <Link className="button button_geel" to="/qrscanner">Gebruik onze QR-scanner</Link>
           </article>
 
           <picture className="scanpicture">
-            <img src="./assets/img/scanimg.png" alt="scan een qr code"/>
+            <img  className="kunststukje-img scan-img" src="./assets/img/scanimg.png" alt="scan een qr code"/>
           </picture>
         </section>
 
         <section className="kiesKunststuk width">
-          <picture class="kunstpicture">
-            <img src="./assets/img/kunststukimg.png" alt="kunststuk"/>
+          <picture className="kunstpicture">
+            <img className="kunststukje-img" src="./assets/img/kunststukimg.png" alt="kunststuk"/>
           </picture>
 
           <article className="kunststuk txt">
             <h3 className="title_geel">kies je kunststuk</h3>
-            <p>Van de 150.000 kunstwerken van Museum Boijmans van Beuningen worden er <span class="highlightblack">drie willekeurig aan jou voorgeschoteld. </span> Daar mag jij één van kiezen waar je mee gaat werken om een tof kunstwerk te maken.</p>
+            <p>Van de 150.000 kunstwerken van Museum Boijmans van Beuningen worden er <span className="highlightblack">drie willekeurig aan jou voorgeschoteld. </span> Daar mag jij één van kiezen waar je mee gaat werken om een tof kunstwerk te maken.</p>
           </article>
         </section>
 
         <section className="kunstenaarVrij width">
           <article className="kunstenaarVrijtxt txt">
             <h3 className="title_geel2">Laat de kunstenaar in je vrij</h3>
-            <p>Zodra je een deel van het kunstwerk hebt uitgekozen om mee te werken, kan je die <span class="highlight">naar jouw wens aanpassen en op het canvas plaatsen. </span> Wanneer het canvas klaar is, zal het worden opgeslagen en zal het, wanneer het zover is, tentoongesteld worden bij de heropening van het museum.
+            <p>Zodra je een deel van het kunstwerk hebt uitgekozen om mee te werken, kan je die <span className="highlight">naar jouw wens aanpassen en op het canvas plaatsen. </span> Wanneer het canvas klaar is, zal het worden opgeslagen en zal het, wanneer het zover is, tentoongesteld worden bij de heropening van het museum.
 
             <br/>
             <span>Waar wacht je nog op? Pak snel je telefoon!</span>
@@ -61,7 +62,7 @@ const InfoComponent = () => {
           </article>
 
           <picture className="kunstenaarpicture">
-            <img src="./assets/img/kunstenaarimg.png" alt="kunstenaar"/>
+            <img className="kunststukje-img" src="./assets/img/kunstenaarimg.png" alt="kunstenaar"/>
           </picture>
         </section>
 
@@ -70,7 +71,7 @@ const InfoComponent = () => {
 
           <div className="wordDeel">
             <picture className="collectiepicture">
-              <img src="./assets/img/collectieimg.png" alt="collectie"/>
+              <img className="collectie-img" src="./assets/img/collectieimg.png" alt="collectie"/>
             </picture>
 
             <article className="collectietxt txt">
@@ -94,9 +95,11 @@ const InfoComponent = () => {
               <Kunstwerk />
             </section>
 
-            <Link to="/kunstwerken"><a className="button button_wit">Ontdek ze allemaal</a></Link>
+            <Link className="button button_wit" to="/kunstwerken">Ontdek ze allemaal</Link>
           </article>
         </section>
+
+        <Footer />
 
       </div>
 

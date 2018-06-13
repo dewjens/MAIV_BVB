@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Kunstwerk = () => {
   return (
@@ -13,7 +14,7 @@ const Kunstwerk = () => {
 
         <p className="kunstwerkName">Paard van je moeder</p>
 
-        <a href="#" className="button kunstwerk_button">Bekijken</a>
+        <Link to="/" className="button kunstwerk_button">Bekijken</Link>
     </article>
 
   );

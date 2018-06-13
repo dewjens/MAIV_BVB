@@ -9,7 +9,7 @@ export default class Form extends Component {
   constructor(props) {
     super();
     this.state = {
-      name: "",
+      name: '',
       x: 0,
       y: 0,
     }
@@ -20,6 +20,10 @@ export default class Form extends Component {
 
   componentWillMount() {
     Ref = firebase.firestore().collection('post');
+  }
+
+  componentDidMount() {
+    this.setState({name: this.props.chosenPiece.name});
   }
 
   handleChange(event) {
@@ -43,7 +47,7 @@ export default class Form extends Component {
   }
 
   render() {
-    console.log(this.props.chosenPiece);
+    console.log(this.state.name);
     const chosenPiece = this.props.chosenPiece;
 
     return (

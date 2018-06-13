@@ -60,8 +60,8 @@ class ImageApp extends Component {
 
     return (
       <div className="App">
-        <Form chosenPiece={chosenPiece}/>
-        <div className="canvas">
+        {/* <Form chosenPiece={chosenPiece}/> */}
+        {/* <div className="canvas">
             {this.state.posts.map((post, i) => (
               <Draggable
                 defaultPosition={{x:Number(post.x), y: Number(post.y)}}
@@ -69,8 +69,31 @@ class ImageApp extends Component {
                   <img alt="kunstwerk" key={i} className="kunstwerkimg" src={"./assets/img/artworks/" + post.name + ".png"}/>
               </Draggable>
             ))}
-        </div>
+        </div>   */}
 
+        <div className="canvas">
+          {this.state.posts.map((post, i) => (
+            <img alt="kunstwerk" 
+              key={i} 
+              className="kunstwerkimg"
+              style={{transform: `translate(${post.x}px, ${post.y}px)`, "opacity": .5}}
+              src={"./assets/img/artworks/" + post.name + ".png" 
+          }/>
+          ))}
+
+          <Draggable
+            defaultPosition={{x:200, y: 200}}
+            bounds={'.canvas'}
+            onStart={this.handleStart}
+            onDrag={this.handleDrag}
+            onStop={this.handleStop}
+            position={null}
+
+          >
+            <img alt="kunstwerk" className="kunstwerkimg" src={"./assets/img/artworks/" + chosenPiece.name + ".png"}/>
+          </Draggable>
+
+        </div>  
       </div>
 
     );

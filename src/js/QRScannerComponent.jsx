@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import QrReader from 'react-qr-reader'
+import {browserHistory} from 'react-router';
 
 class QRScannerComponent extends Component {
   constructor(props){
@@ -12,9 +13,7 @@ class QRScannerComponent extends Component {
   }
   handleScan(data){
     if(data){
-      this.setState({
-        result: data,
-      })
+      this.props.history.push('/billboard');
     }
   }
   handleError(err){

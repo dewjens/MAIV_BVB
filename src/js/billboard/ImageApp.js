@@ -66,6 +66,10 @@ class ImageApp extends Component {
   }
 
   handleSubmit() {
+    const chosenPiece = this.props.arts[this.props.chosenArt].stukken[this.props.chosenPieceNr];
+    console.log(chosenPiece);
+    //this.setState({});
+
     const Post = ({
       name: this.state.name,
       x: this.state.x,
@@ -84,16 +88,6 @@ class ImageApp extends Component {
 
     return (
       <div className="App">
-        {/* <Form chosenPiece={chosenPiece}/> */}
-        {/* <div className="canvas">
-            {this.state.posts.map((post, i) => (
-              <Draggable
-                defaultPosition={{x:Number(post.x), y: Number(post.y)}}
-                bounds={'.canvas'}>
-                  <img alt="kunstwerk" key={i} className="kunstwerkimg" src={"./assets/img/artworks/" + post.name + ".png"}/>
-              </Draggable>
-            ))}
-        </div>   */}
 
         <div className="canvas">
           {this.state.posts.map((post, i) => (

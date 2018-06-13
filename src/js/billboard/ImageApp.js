@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import firestore from 'firebase/firestore';
-import Form from './components/form.js';
-import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
+//import firestore from 'firebase/firestore';
+import Form from '../components/form.js';
+import Draggable from 'react-draggable'; // Both at the same time
 
 let Ref;
 var config = {
@@ -18,12 +18,13 @@ var config = {
   firebase.firestore().enablePersistence();
 
 class ImageApp extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       posts : [],
     };
     this.getRealtimeUpdates = this.getRealtimeUpdates.bind(this);
+
   }
 
   getRealtimeUpdates() {
@@ -54,15 +55,18 @@ class ImageApp extends Component {
   }
 
   render() {
+    const chosenPiece = this.props.arts[this.props.chosenArt].stukken[this.props.chosenPieceNr];
+    console.log(chosenPiece);
+
     return (
       <div className="App">
-        <Form/>
+        <Form chosenPiece={chosenPiece}/>
         <div className="canvas">
             {this.state.posts.map((post, i) => (
               <Draggable
-              defaultPosition={{x:Number(post.x), y: Number(post.y)}}
-              bounds={'.canvas'}>
-                <img alt="kunstwerk" key={i} className="kunstwerkimg" src={"../../assets/img/" + post.name}/>
+                defaultPosition={{x:Number(post.x), y: Number(post.y)}}
+                bounds={'.canvas'}>
+                  <img alt="kunstwerk" key={i} className="kunstwerkimg" src={"./assets/img/artworks/" + post.name + ".png"}/>
               </Draggable>
             ))}
         </div>

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-// import firestore //
 import firebase from 'firebase';
-import firestore from 'firebase/firestore'
+//import firestore from 'firebase/firestore'
 let Ref;
 
 export default class Form extends Component {
 
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       name: "",
@@ -36,34 +35,36 @@ export default class Form extends Component {
   handleSubmit() {
     const Post = ({
       name: this.state.name,
-      x:this.state.x,
-      y:this.state.y,
+      x: this.state.x,
+      y: this.state.y,
       time: firebase.firestore.FieldValue.serverTimestamp(),
     });
     Ref.add(Post);
   }
 
-
   render() {
+    console.log(this.props.chosenPiece);
+    const chosenPiece = this.props.chosenPiece;
+
     return (
       <div className="form-row">
         <input name="name"
           className="form-control col-md-2"
           value={this.state.name}
           onChange={this.handleChange}
-          placeholder="Name"
+          defaultValue={chosenPiece.name}
         />
         <input name="x"
           className="form-control col-md-2"
           value={this.state.x}
           onChange={this.handleChange}
-          placeholder="x"
+          defaultValue="200"
         />
         <input name="y"
           className="form-control col-md-2"
           value={this.state.y}
           onChange={this.handleChange}
-          placeholder="y"
+          defaultValue="100"
         />
         <button type="button" className="confirmBtn" onClick={this.handleSubmit}>
 

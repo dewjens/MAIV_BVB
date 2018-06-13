@@ -1,25 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-const OnboardingPage = ({onboarding, currentPage, onNext}) => {
-
-  const handleNext = () => {
-    if(currentPage<3) {
-      console.log(currentPage++);
-      onNext(currentPage++);
-    }
-  }
-
-  const handleBack = () => {
-    if(currentPage>1) {
-      console.log(currentPage--);
-      onNext(currentPage--);
-    }
-  }
+const OnboardingPage = ({onboarding, currentPage, onNext, onBack}) => {
 
   return (
     <div className={"onboarding onboarding" + currentPage}>
-      <img src="./assets/img/arrow_back.png" alt="back arrow" className={"arrowBack" + (currentPage===1 ? " hidden" : "")} onClick={() => handleBack()}/>
+      <img src="./assets/img/arrow_back.png" alt="back arrow" className={"arrowBack" + (currentPage===1 ? " hidden" : "")} onClick={onBack}/>
       <img src="./assets/img/boijmans-logo.png" alt="logo"/>
 
       <section>
@@ -33,7 +19,7 @@ const OnboardingPage = ({onboarding, currentPage, onNext}) => {
       <section className="onboardingBottom">
         <Link to="/billboard" className="onboardingSkip">skip</Link>
         <p>{currentPage}/3</p>
-        <img src="./assets/img/next.svg" alt="next" onClick={() => handleNext()}/>
+        <img src="./assets/img/next.svg" alt="next" onClick={onNext}/>
       </section>
     </div>
   );

@@ -79,7 +79,7 @@ body {
 
 .kunstwerkimg {
   width: 10rem;
-  height: 10rem;
+  height: auto;
   position: absolute;
 }
 
@@ -92,11 +92,11 @@ body {
 
 .confirmBtn {
   border: none;
-  background-image: url('../assets/img/confirmBtn.png');
+  background-image: url('../assets/img/confirm.svg');
   background-size: cover;
   border-radius: 20rem;
-  height: 5rem;
-  width: 5rem;
+  height: 7rem;
+  width: 7rem;
   z-index: 99;
   position: absolute;
   left: 0;
@@ -571,6 +571,68 @@ h3 {
   position: absolute;
   top: 3rem;
   left: 2rem;
+}
+
+.appHeader {
+  background-color: var(--main-color);
+  padding: 2rem .5rem;
+  text-align: center;
+}
+
+.appHeaderPage {
+  margin-top: .5rem;
+}
+
+.appContainer {
+  overflow: hidden;
+  background-color: #f9f7f4;
+  height: 100vh;
+}
+
+.appTxt {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.artImage {
+  height: 60vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.artName {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.check {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: -45%;
+}
+
+.pieceDot {
+  height: 2rem;
+  width: 2rem;
+  background-color: white;
+  position: absolute;
+  border-radius: 5rem;
+}
+
+.dotSelected {
+  background-color: var(--main-color);
+}
+
+.pieceDot:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
 }
 
 @media (max-width: 1100px) {

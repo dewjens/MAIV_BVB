@@ -2,20 +2,9 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import firestore from 'firebase/firestore';
 import Form from './components/form.js';
-import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
+import Draggable from 'react-draggable'; // Both at the same time
 
 let Ref;
-var config = {
-  apiKey: "AIzaSyAUCTqRNa9qdPJT31pXeJJQLUUSNNQdw6A",
-  authDomain: "billboardsbyboijmans.firebaseapp.com",
-  databaseURL: "https://billboardsbyboijmans.firebaseio.com",
-  projectId: "billboardsbyboijmans",
-  storageBucket: "billboardsbyboijmans.appspot.com",
-  messagingSenderId: "930811275069"
-  };
-
-  firebase.initializeApp(config);
-  firebase.firestore().enablePersistence();
 
 class ImageApp extends Component {
   constructor() {
@@ -56,13 +45,14 @@ class ImageApp extends Component {
   render() {
     return (
       <div className="App">
-        <Form/>
+        <Form />
         <div className="canvas">
             {this.state.posts.map((post, i) => (
-              <Draggable
+              <Draggable key={i}
+              onStart={() => false}
               defaultPosition={{x:Number(post.x), y: Number(post.y)}}
               bounds={'.canvas'}>
-                <img alt="kunstwerk" key={i} className="kunstwerkimg" src={"../../assets/img/" + post.name}/>
+                <img alt="kunstwerk" key={i}className="kunstwerkimg" src={"../../assets/img/" + post.name}/>
               </Draggable>
             ))}
         </div>

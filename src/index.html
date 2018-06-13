@@ -7,7 +7,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
     <script>
        WebFontConfig = {
-           google: {
+           Custom: {
              families: ['mexcellent'],
              urls: ['assets/fonts/mexcellent/mexcellent.css']
            }
@@ -22,6 +22,9 @@
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script>
       // Initialize Firebase
+      const firestore = firebase.firestore();
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  firestore.settings(settings);
       var config = {
         apiKey: "AIzaSyAUCTqRNa9qdPJT31pXeJJQLUUSNNQdw6A",
         authDomain: "billboardsbyboijmans.firebaseapp.com",

@@ -22,8 +22,13 @@ class ImageApp extends Component {
     super();
     this.state = {
       posts : [],
+      activeDrags: 0,
+      controlledPosition: {
+        x: 100, y: 200
+      }
     };
     this.getRealtimeUpdates = this.getRealtimeUpdates.bind(this);
+    this.onControlledDrag = this.onControlledDrag.bind(this);
 
   }
 
@@ -54,9 +59,28 @@ class ImageApp extends Component {
     this.getRealtimeUpdates();
   }
 
+  onControlledDrag(e, position) {
+    const {x, y} = position;
+    this.setState({controlledPosition: {x, y}});
+    console.log(this.state.controlledPosition);
+  }
+
+  handleSubmit() {
+    const Post = ({
+      name: this.state.name,
+      x: this.state.x,
+      y: this.state.y,
+      time: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    Ref.add(Post);
+  }
+
   render() {
     const chosenPiece = this.props.arts[this.props.chosenArt].stukken[this.props.chosenPieceNr];
     console.log(chosenPiece);
+
+    const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
+    const {controlledPosition} = this.state;
 
     return (
       <div className="App">
@@ -82,16 +106,18 @@ class ImageApp extends Component {
           ))}
 
           <Draggable
-            defaultPosition={{x:200, y: 200}}
             bounds={'.canvas'}
-            onStart={this.handleStart}
-            onDrag={this.handleDrag}
-            onStop={this.handleStop}
-            position={null}
 
+            position={controlledPosition} {...dragHandlers} 
+            onDrag={this.onControlledDrag}
           >
             <img alt="kunstwerk" className="kunstwerkimg" src={"./assets/img/artworks/" + chosenPiece.name + ".png"}/>
           </Draggable>
+          
+          <button type="button" className="confirmBtn" onClick={this.handleSubmit}>
+
+          </button>
+          
 
         </div>  
       </div>

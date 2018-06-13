@@ -2,8 +2,7 @@ import React from 'react';
 import AppHeader from './AppHeader.jsx';
 import ChooseArt from './ChooseArt.jsx';
 import PickPiece from './PickPiece.jsx';
-import ImageApp from './ImageApp.js';
-
+import ImageApp from './ImageApp.jsx';
 
 const StartApp = ({currentPage, onBack, onNext, stappen, arts, chosenArt, onSelect, chosenPiece, isSelected, chosenPieceNr}) => {
   return (
@@ -38,6 +37,7 @@ const StartApp = ({currentPage, onBack, onNext, stappen, arts, chosenArt, onSele
                 chosenArt={chosenArt} 
               />
             );
+
             default: return "oops geen stap";
           }
         })()}

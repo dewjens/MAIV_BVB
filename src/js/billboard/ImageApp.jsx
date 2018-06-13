@@ -3,6 +3,7 @@ import firebase from 'firebase';
 //import firestore from 'firebase/firestore';
 import Form from '../components/form.js';
 import Draggable from 'react-draggable'; // Both at the same time
+import Afronden from './Afronden.jsx';
 
 let Ref;
 var config = {
@@ -26,6 +27,7 @@ class ImageApp extends Component {
       controlledPosition: {
         x: 100, y: 200
       }
+      ,currentPage: 6
     };
     this.getRealtimeUpdates = this.getRealtimeUpdates.bind(this);
     this.onControlledDrag = this.onControlledDrag.bind(this);
@@ -66,8 +68,8 @@ class ImageApp extends Component {
   }
 
   handleSubmit(chosenPiece) {
-    console.log(chosenPiece.name);
-    //this.setState({});
+    console.log("placed!");
+    this.setState({currentPage: this.state.currentPage+1});
 
     const Post = ({
       name: chosenPiece.name,
@@ -79,41 +81,49 @@ class ImageApp extends Component {
     Ref.add(Post);
   }
 
+
   render() {
     const chosenPiece = this.props.arts[this.props.chosenArt].stukken[this.props.chosenPieceNr];
-    console.log(chosenPiece);
+    //console.log(chosenPiece);
 
     const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
-    const {controlledPosition} = this.state;
+    const {controlledPosition, currentPage} = this.state;
 
     return (
       <div className="App">
+        
 
-        <div className="canvas">
-          {this.state.posts.map((post, i) => (
-            <img alt="kunstwerk" 
-              key={i} 
-              className="kunstwerkimg"
-              style={{transform: `translate(${post.x}px, ${post.y}px)`, "opacity": .5}}
-              src={"./assets/img/artworks/" + post.name + ".png" 
-          }/>
-          ))}
+       {(() => {
+          switch (currentPage) {
+            case 6: return(
+              <div className="canvas">
+                {this.state.posts.map((post, i) => (
+                  <img alt="kunstwerk" 
+                    key={i} 
+                    className="kunstwerkimg"
+                    style={{transform: `translate(${post.x}px, ${post.y}px)`, "opacity": .5}}
+                    src={"./assets/img/artworks/" + post.name + ".png" 
+                }/>
+                ))}
+      
+                <Draggable
+                  bounds={'.canvas'}
+      
+                  position={controlledPosition} {...dragHandlers} 
+                  onDrag={this.onControlledDrag}
+                >
+                  <img alt="kunstwerk" className="kunstwerkimg" draggable="false" src={"./assets/img/artworks/" + chosenPiece.name + ".png"}/>
+                </Draggable>
+              
+                <button type="button" className="confirmBtn" onClick={()=>this.handleSubmit(chosenPiece)}></button>
+            </div>);
+            case 7: return (
+              <Afronden posts={this.state.posts}/>);
+            default: return "oops geen stap";
+          }
+        })()}
 
-          <Draggable
-            bounds={'.canvas'}
-
-            position={controlledPosition} {...dragHandlers} 
-            onDrag={this.onControlledDrag}
-          >
-            <img alt="kunstwerk" className="kunstwerkimg" src={"./assets/img/artworks/" + chosenPiece.name + ".png"}/>
-          </Draggable>
-          
-          <button type="button" className="confirmBtn" onClick={()=>this.handleSubmit(chosenPiece)}>
-
-          </button>
-          
-
-        </div>  
+ 
       </div>
 
     );

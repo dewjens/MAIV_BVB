@@ -65,17 +65,17 @@ class ImageApp extends Component {
     console.log(this.state.controlledPosition);
   }
 
-  handleSubmit() {
-    const chosenPiece = this.props.arts[this.props.chosenArt].stukken[this.props.chosenPieceNr];
-    console.log(chosenPiece);
+  handleSubmit(chosenPiece) {
+    console.log(chosenPiece.name);
     //this.setState({});
 
     const Post = ({
-      name: this.state.name,
-      x: this.state.x,
-      y: this.state.y,
+      name: chosenPiece.name,
+      x: this.state.controlledPosition.x,
+      y: this.state.controlledPosition.y,
       time: firebase.firestore.FieldValue.serverTimestamp(),
     });
+
     Ref.add(Post);
   }
 
@@ -108,7 +108,7 @@ class ImageApp extends Component {
             <img alt="kunstwerk" className="kunstwerkimg" src={"./assets/img/artworks/" + chosenPiece.name + ".png"}/>
           </Draggable>
           
-          <button type="button" className="confirmBtn" onClick={this.handleSubmit}>
+          <button type="button" className="confirmBtn" onClick={()=>this.handleSubmit(chosenPiece)}>
 
           </button>
           

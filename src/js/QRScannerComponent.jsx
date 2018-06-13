@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import QrReader from 'react-qr-reader'
+//import {Link} from 'react-router-dom';
+import Footer from './FooterComponent.jsx';
 
 
 class QRScannerComponent extends Component {
@@ -21,20 +23,39 @@ class QRScannerComponent extends Component {
   handleError(err){
     console.error(err)
   }
+
+
   render(){
     return(
-      <div>
-        <section className="pagHeader">
-          <h2>Bezoek deze pagina met je smartphone voor de volledige beleving!ompleet zijn door jullie</h2>
+
+      <div className="kunstwerkenContainer">
+        <section className="page-header">
+          <h2>Scan de QR code op de billboard!</h2>
         </section>
 
+          <div className="desktop-container">
+            <img src="./assets/img/bezoekPhone.png" alt="go to mobile"/>
+            <div className="text-bg">
+              <div>
+                <p className="qr-text">bezoek deze pagina voor de volledige beleving</p>
+                <p className="qr-text">pak je telefoon en scan deze qr-code</p>
+              </div>
+              <img src="./assets/img/qr-code.png" alt="qr code" width="143px" height="143px" />
+
+            </div>
+          </div>
+
+      <div className="qr-reader">
         <QrReader
           delay={this.state.delay}
           onError={this.handleError}
           onScan={this.handleScan}
           style={{ width: '50%' }}
           />
-        <p>{this.state.result}</p>
+        <a href="www.google.com">{this.state.result}</a>
+        </div>
+
+        <Footer />
       </div>
     )
   }

@@ -27,8 +27,8 @@ body {
   height: 10rem;
   position: fixed;
   width: 100vw;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: 99;
   background-color: white;
 }
@@ -75,12 +75,13 @@ body {
 }
 
 .link-1 {
+
   &::before {
-    content:"";
+    content: '';
     width: 1.9rem;
     height: 2.9rem;
     position: absolute;
-    background-image: url('../assets/img/marker.svg');
+    background-image: url(../assets/img/marker.svg);
     margin-left: -3rem;
   }
 
@@ -89,18 +90,18 @@ body {
   }
 
   &:hover::before {
-    background-image: url('../assets/img/marker-yellow.svg');
+    background-image: url(../assets/img/marker-yellow.svg);
   }
 }
 
 .link-2 {
 
   &::before {
-    content:"";
+    content: '';
     width: 2.1rem;
     height: 2.9rem;
     position: absolute;
-    background-image: url('../assets/img/artwork.svg');
+    background-image: url(../assets/img/artwork.svg);
     margin-left: -3rem;
   }
 
@@ -109,10 +110,8 @@ body {
   }
 
   &:hover::before {
-    background-image: url('../assets/img/artwork-yellow.svg');
+    background-image: url(../assets/img/artwork-yellow.svg);
   }
-
-
 }
 
 .link-3 {
@@ -122,7 +121,7 @@ body {
     width: 2rem;
     height: 2rem;
     position: absolute;
-    background-image: url('../assets/img/qr-code.svg');
+    background-image: url(../assets/img/qr-code.svg);
     margin-left: -3rem;
   }
 
@@ -131,18 +130,18 @@ body {
   }
 
   &:hover::before {
-    background-image: url('../assets/img/qr-code-yellow.svg');
+    background-image: url(../assets/img/qr-code-yellow.svg);
   }
 }
 
 .link-4 {
 
   &::before {
-    content:"";
+    content: '';
     width: 2.3rem;
     height: 2.3rem;
     position: absolute;
-    background-image: url('../assets/img/info.svg');
+    background-image: url(../assets/img/info.svg);
     margin-left: -3rem;
   }
 
@@ -151,11 +150,9 @@ body {
   }
 
   &:hover::before {
-    background-image: url('../assets/img/info-yellow.svg');
+    background-image: url(../assets/img/info-yellow.svg);
   }
 }
-
-
 
 br {
   line-height: 4rem;
@@ -411,13 +408,14 @@ h3 {
 
 /* KUNSTWERKEN */
 
-.pagHeader {
+.page-header {
   background-color: var(--main-color);
   text-align: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-image: url(../assets/img/headerbg.svg);
   background-position: right;
+  margin-top: 10rem;
 
   & h2 {
     text-transform: uppercase;
@@ -428,6 +426,7 @@ h3 {
 .kunstwerken {
   margin-top: 5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -461,6 +460,42 @@ h3 {
   border: .5rem solid white;
 }
 
+.desktop-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-text {
+  color: white;
+  font-family: mexcellent;
+  font-weight: regular;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  width: 40rem;
+}
+
+.text-bg {
+  background-color: black;
+  margin-left: -40rem;
+  display: flex;
+  padding: 2rem;
+}
+
+.qr-reader {
+  display: none;
+}
+
+.footer {
+  background-color: var(--main-color);
+  height: 11rem;
+}
+
+.logo-footer {
+  margin-top: 5rem;
+  margin-left: 2rem;
+}
+
 @media (max-width: 1100px) {
 
   .headerpicture {
@@ -468,7 +503,8 @@ h3 {
   }
 }
 
-@media(width <= 1055px) {
+@media (width <= 1055px) {
+
   .nav-link {
     font-size: 1.6rem;
   }
@@ -533,61 +569,70 @@ h3 {
     width: 100%;
   }
 
+  .page-header {
+    margin-top: 0;
+  }
+
   .nav-link-mobile-1 {
+
     &::before {
-      content:"";
+      content: '';
       width: 2.9rem;
       height: 2.7rem;
       position: absolute;
-      background-image: url('../assets/img/home.svg');
+      background-image: url(../assets/img/home.svg);
       margin-left: .7rem;
       margin-top: -3rem;
     }
   }
 
   .nav-link-mobile-2 {
+
     &::before {
-      content:"";
+      content: '';
       width: 1.9rem;
       height: 2.9rem;
       position: absolute;
-      background-image: url('../assets/img/marker.svg');
+      background-image: url(../assets/img/marker.svg);
       margin-left: 2rem;
       margin-top: -3rem;
     }
   }
 
   .nav-link-mobile-3 {
+
     &::before {
-      content:"";
+      content: '';
       width: 4.2rem;
       height: 4.2rem;
       position: absolute;
-      background-image: url('../assets/img/qr-code-scanner.svg');
+      background-image: url(../assets/img/qr-code-scanner.svg);
       margin-left: 1.3rem;
       margin-top: -4.5rem;
     }
   }
 
   .nav-link-mobile-4 {
+
     &::before {
-      content:"";
+      content: '';
       width: 2.1rem;
       height: 2.9rem;
       position: absolute;
-      background-image: url('../assets/img/artwork.svg');
+      background-image: url(../assets/img/artwork.svg);
       margin-left: 1.3rem;
       margin-top: -3rem;
     }
   }
 
   .nav-link-mobile-5 {
+
     &::before {
-      content:"";
+      content: '';
       width: 2.3rem;
       height: 2.3rem;
       position: absolute;
-      background-image: url('../assets/img/info.svg');
+      background-image: url(../assets/img/info.svg);
       margin-left: .2rem;
       margin-top: -3rem;
     }
@@ -603,6 +648,31 @@ h3 {
 
   .nav-li {
     margin-top: 3rem;
+  }
+
+  .desktop-container {
+    display: none;
+  }
+
+  .qr-reader {
+    display: inline;
+  }
+
+  .wordDeel {
+    flex-flow: column;
+  }
+
+  .collectie-img {
+    width: 90vw;
+    margin-right: 0;
+  }
+
+  .kunststukje-img {
+    width: 90vw;
+  }
+
+  .scan-img {
+    width: 90vw;
   }
 }
 

@@ -21,12 +21,14 @@ const HeaderComponent = () => {
           </ul>
         </nav>
       <header className="header-container">
-        <div className="logo-container">
-          <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
-          <h1 className="header-title">billboards by boijmans</h1>
-          <div className="black-stroke"></div>
-          <div className="black-stroke"></div>
-        </div>
+        <Link className="" to="/">
+          <div className="logo-container">
+            <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
+            <h1 className="header-title">billboards by boijmans</h1>
+            <div className="black-stroke"></div>
+            <div className="black-stroke"></div>
+          </div>
+        </Link>
         <nav className="nav-container">
           <ul className="nav-list">
             <li><Link className="nav-link link-1" to="/locaties">Locaties</Link></li>
@@ -37,8 +39,7 @@ const HeaderComponent = () => {
         </nav>
         </header>
         <Switch>
-          <Route path="/" exact render={() =>  <Home />} />
-
+          <Route path="/" exact render={Home} />
           <Route path="/locaties" component={Locatie} />
           <Route path="/kunstwerken" component={Kunstwerken} />
           <Route path="/qrscanner" component={QRScanner} />

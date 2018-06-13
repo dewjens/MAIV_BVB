@@ -11,7 +11,8 @@ export default class Form extends Component {
     super();
     this.state = {
       name: "",
-      content: "",
+      x: 0,
+      y: 0,
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -35,7 +36,8 @@ export default class Form extends Component {
   handleSubmit() {
     const Post = ({
       name: this.state.name,
-      content:this.state.content,
+      x:this.state.x,
+      y:this.state.y,
       time: firebase.firestore.FieldValue.serverTimestamp(),
     });
     Ref.add(Post);
@@ -51,8 +53,20 @@ export default class Form extends Component {
           onChange={this.handleChange}
           placeholder="Name"
         />
+        <input name="x"
+          className="form-control col-md-2"
+          value={this.state.x}
+          onChange={this.handleChange}
+          placeholder="x"
+        />
+        <input name="y"
+          className="form-control col-md-2"
+          value={this.state.y}
+          onChange={this.handleChange}
+          placeholder="y"
+        />
         <button type="button" className="confirmBtn" onClick={this.handleSubmit}>
-        
+
         </button>
       </div>
     );

@@ -31,10 +31,14 @@ class ImageApp extends Component {
       let newArr = [];
       snap.forEach(doc => {
         let name = doc.data().name;
+        let x = doc.data().x;
+        let y = doc.data().y;
         let time = doc.data().time;
 
         let post = ({
           name,
+          x,
+          y,
           time,
         });
         newArr.push(post);
@@ -56,7 +60,7 @@ class ImageApp extends Component {
         <div className="canvas">
             {this.state.posts.map((post, i) => (
               <Draggable
-              defaultPosition={{x:20, y: 0}}
+              defaultPosition={{x:Number(post.x), y: Number(post.y)}}
               bounds={'.canvas'}>
                 <img alt="kunstwerk" key={i} className="kunstwerkimg" src={"../../assets/img/" + post.name}/>
               </Draggable>

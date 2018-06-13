@@ -428,6 +428,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .kunstwerk {
@@ -459,6 +460,7 @@ h3 {
   padding: 1rem 2rem;
   border: .5rem solid white;
 }
+
 
 .desktop-container {
   display: flex;
@@ -495,6 +497,13 @@ h3 {
   margin-top: 5rem;
   margin-left: 2rem;
 }
+
+/* QRREADER */
+
+.qrreader {
+  display: none;
+}
+
 
 @media (max-width: 1100px) {
 
@@ -644,6 +653,10 @@ h3 {
 
   .header {
     margin-top: 0;
+  }
+
+  .qrreader {
+    display: block;
   }
 
   .nav-li {

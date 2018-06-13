@@ -5,6 +5,7 @@ import Kunstwerken from './KunstwerkenComponent.jsx';
 import QRScanner from './QRScannerComponent.jsx';
 import Info from './InfoComponent.jsx';
 import Home from './HomeComponent.jsx'
+import Billboard from './Billboard.jsx'
 
 
 const HeaderComponent = () => {
@@ -21,7 +22,7 @@ const HeaderComponent = () => {
           </ul>
         </nav>
       <header className="header-container">
-        <Link className="" to="/">
+        <Link to="/">
           <div className="logo-container">
             <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
             <h1 className="header-title">billboards by boijmans</h1>
@@ -44,6 +45,10 @@ const HeaderComponent = () => {
           <Route path="/kunstwerken" component={Kunstwerken} />
           <Route path="/qrscanner" component={QRScanner} />
           <Route path="/info" component={Info} />
+
+          <Route
+            path="/billboard" component={Billboard}
+          />
         </Switch>
       </header>
     </HashRouter>

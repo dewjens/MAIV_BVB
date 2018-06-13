@@ -50,12 +50,14 @@ class QRScannerComponent extends Component {
           delay={this.state.delay}
           onError={this.handleError}
           onScan={this.handleScan}
+
           style={{ width: '50%' }}
           />
         <a href="www.google.com">{this.state.result}</a>
         </div>
 
         <Footer />
+
       </div>
     )
   }

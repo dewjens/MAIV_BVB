@@ -845,6 +845,8 @@ h3 {
   background-image: url(../assets/img/lefttop.svg), url(../assets/img/righttop.svg), url(../assets/img/leftbot.svg), url(../assets/img/rightbot.svg);
   background-position: 5% 5%, 95% 5%, 5% 75%, 95% 75%;
   background-repeat: no-repeat;
+}
+ 
 .map {
   position: absolute;
   top: 0;

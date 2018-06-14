@@ -5,7 +5,8 @@ import Kunstwerken from './KunstwerkenComponent.jsx';
 import QRScanner from './QRScannerComponent.jsx';
 import Info from './InfoComponent.jsx';
 import Home from './HomeComponent.jsx'
-import Billboard from './Billboard.jsx'
+import BillboardComponent from './billboard/BillboardComponent.jsx'
+import Bedankt from './billboard/BedanktPage.jsx'
 
 
 const HeaderComponent = () => {
@@ -47,8 +48,10 @@ const HeaderComponent = () => {
           <Route path="/info" component={Info} />
 
           <Route
-            path="/billboard" component={Billboard}
+            path="/billboard" component={BillboardComponent}
           />
+
+          <Route path="/bedankt" component={Bedankt} />
         </Switch>
       </header>
     </HashRouter>

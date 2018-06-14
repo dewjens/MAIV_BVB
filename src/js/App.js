@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ClassComponent from './ClassComponent.jsx';
+import HeaderComponent from './HeaderComponent.jsx';
 
 ReactDOM.render(
-  <ClassComponent />,
+  <HeaderComponent />,
   document.getElementById('reactcontent')
 );

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import QrReader from 'react-qr-reader'
+import {browserHistory} from 'react-router';
 //import {Link} from 'react-router-dom';
 import Footer from './FooterComponent.jsx';
 
@@ -15,9 +16,7 @@ class QRScannerComponent extends Component {
   }
   handleScan(data){
     if(data){
-      this.setState({
-        result: data,
-      })
+      this.props.history.push('/billboard');
     }
   }
   handleError(err){
@@ -27,7 +26,6 @@ class QRScannerComponent extends Component {
 
   render(){
     return(
-
       <div className="kunstwerkenContainer">
         <section className="page-header">
           <h2>Scan de QR code op de billboard!</h2>

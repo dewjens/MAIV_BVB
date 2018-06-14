@@ -66,17 +66,18 @@ class Poster extends Component {
           <h3 class="toscansub">by boijmans</h3>
         </article>
       </div>
-
-       <div className="canvas">
-        <div className="canvas_poster">
-          {posts.map((post, i) => (
-            <img alt="kunstwerk"
-              key={i}
-              className="kunstwerkimg"
-              style={{transform: `translate(${post.x}px, ${post.y}px)`, "opacity": 1}}
-              src={"./assets/img/artworks/" + post.name + ".png"
-          }/>
-          ))}
+      <div className="center-canvas">
+         <div className="canvas">
+          <div className="canvas_poster">
+            {posts.map((post, i) => (
+              <img alt="kunstwerk"
+                key={i}
+                className="kunstwerkimg"
+                style={{transform: `translate(${post.x*5}px, ${post.y*5}px)`, "opacity": 1, "width": `20rem`}}
+                src={"./assets/img/artworks/" + post.name + ".png"
+            }/>
+            ))}
+          </div>
         </div>
       </div>
 

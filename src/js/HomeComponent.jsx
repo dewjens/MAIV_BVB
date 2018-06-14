@@ -2,11 +2,12 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import Kunstwerk from './Kunstwerk.jsx';
 import Footer from './FooterComponent.jsx';
+import Anime from 'react-anime';
 
 const InfoComponent = () => {
+
   return (
       <div className="homeContainer">
-
         <section className="header width">
           <article className="headertxt txt">
             <h2>Hoe bedoel je: "kunst is gaar"?</h2>
@@ -16,12 +17,12 @@ const InfoComponent = () => {
             <br/>
             <span>JOUW WERK. IN HET MUSEUM</span>.</p>
 
-            <Link className="button button_wit" to="/locaties">Ontek de locaties</Link>
+            <Link className="button button_wit" to="/locaties">Ontdek de locaties</Link>
             <Link className="secondLink" to="/kunstwerken">of bekijk de reeds gemaakte werken</Link>
           </article>
 
           <picture className="headerpicture">
-            <img src="./assets/img/headerimg.png" alt="billboards"/>
+            <img className="headerimg" src="./assets/img/headerimg.png" alt="billboards"/>
           </picture>
         </section>
 
@@ -29,15 +30,25 @@ const InfoComponent = () => {
           <p className="howTo">Hoe ga je te werk?</p>
 
           <article className="scanBillboardtxt txt">
-            <h3 className="title_black">Scan een van onze billboards</h3>
-            <p>Hoe doe je mee? Onze billboards staan verspreid over de hele stad. <span className="highlight"> Op ieder billboard staat een QR-code die gescanned kan worden </span> met jouw telefoon. Heb je geen QR-scanner? Surf dan naar ... om direct te beginnen!</p>
+            <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750}>
+              <h3 className="title_black">Scan een van onze billboards</h3>
+            </Anime>
 
-            <Link className="button button_geel" to="/qrscanner">Gebruik onze QR-scanner</Link>
+            <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750} delay={200}>
+              <p>Hoe doe je mee? Onze billboards staan verspreid over de hele stad. <span className="highlight"> Op ieder billboard staat een QR-code die gescanned kan worden </span> met jouw telefoon. Heb je geen QR-scanner? Surf dan naar ... om direct te beginnen!</p>
+            </Anime>
+
+              <Link className="button button_geel" to="/qrscanner">
+
+               <span className="nieuwe-button">Gebruik onze QR-scanner</span>
+             </Link>
+
           </article>
-
+          <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750}>
           <picture className="scanpicture">
             <img  className="kunststukje-img scan-img" src="./assets/img/scanimg.png" alt="scan een qr code"/>
           </picture>
+        </Anime>
         </section>
 
         <section className="kiesKunststuk width">
@@ -46,7 +57,9 @@ const InfoComponent = () => {
           </picture>
 
           <article className="kunststuk txt">
+            <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750}>
             <h3 className="title_geel">kies je kunststuk</h3>
+          </Anime>
             <p>Van de 150.000 kunstwerken van Museum Boijmans van Beuningen worden er <span className="highlightblack">drie willekeurig aan jou voorgeschoteld. </span> Daar mag jij één van kiezen waar je mee gaat werken om een tof kunstwerk te maken.</p>
           </article>
         </section>

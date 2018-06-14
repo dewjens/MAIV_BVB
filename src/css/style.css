@@ -301,6 +301,7 @@ h3 {
   z-index: 1;
   margin-left: 5rem;
   padding-top: 0;
+  animation: headertxt 2s ease;
 }
 
 .scanBillboard {
@@ -320,6 +321,8 @@ h3 {
 .scanpicture {
   width: 45.5rem;
   height: 42.2rem;
+  z-index: -1;
+  position: absolute;
 
   & img {
     width: 100%;
@@ -351,6 +354,7 @@ h3 {
   background-image: url(../assets/img/lines_white.png);
   background-position: 95% 170%;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .kunstenaarVrij {
@@ -567,6 +571,7 @@ h3 {
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1;
   }
 
   .nav-mobile {
@@ -730,5 +735,41 @@ h3 {
     display: flex;
     flex-direction: column;
     height: 80rem;
+  }
+}
+
+/*ANIMATION*/
+
+.headerimg {
+  animation: header .75s ease;
+}
+
+@keyframes header {
+
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.header-animation {
+  animation: nav .75s ease;
+}
+
+@keyframes headertxt {
+
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
   }
 }

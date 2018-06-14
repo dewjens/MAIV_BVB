@@ -3,7 +3,6 @@ import HeaderComponent from './HeaderComponent.jsx';
 
 class ClassComponent extends Component {
 
-
   render(){
     return (
       <HeaderComponent />

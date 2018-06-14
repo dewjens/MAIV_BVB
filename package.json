@@ -44,8 +44,10 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
     "mapbox-gl": "^0.45.0",
     "react": "^16.2.0",
+    "react-anime": "^2.1.0",
     "react-dom": "^16.2.0",
     "react-mapbox-gl": "^3.8.0",
     "react-qr-reader": "^2.1.0",

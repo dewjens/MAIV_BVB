@@ -58,10 +58,12 @@ class Poster extends Component {
       <section className="poster">
       <div className="tile-bar">
         <article class="titlediv">
-          <h2 className="toscan"><h2 class="yellow">collaborative</h2> billboards</h2>
-          <h3 class="toscansub">by boijmans</h3>
+          <h2 className="toscan"><span class="yellow">collaborative</span> billboards</h2>
+          <h3 className="toscansub">by boijmans</h3>
         </article>
       </div>
+
+      <div className="center-canvas-2">
         <div className="canvas">
             {this.state.posts.map((post, i) => (
               <Draggable key={i}
@@ -71,6 +73,8 @@ class Poster extends Component {
               </Draggable>
             ))}
         </div>
+        </div>
+
         <div className="qr-bar">
           <article class="qr-desc">
             <h2 className="toscan">to scan or not to scan</h2>

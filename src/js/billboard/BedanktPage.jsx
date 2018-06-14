@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Afronden = ({posts}) => {
+const BedanktPage = ({posts}) => {
 
   return (
     <section className="postPage">
@@ -43,4 +44,8 @@ const Afronden = ({posts}) => {
   );
 }
 
-export default Afronden;
+BedanktPage.propTypes = {
+  posts: PropTypes.object.isRequired
+}
+
+export default BedanktPage;

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const PickPiece = ({onNext, arts, chosenArt, onSelect, chosenPiece, isSelected, currentPage, stappen, onBack}) => {
 
@@ -69,6 +69,16 @@ const PickPiece = ({onNext, arts, chosenArt, onSelect, chosenPiece, isSelected, 
 
 
   );
+}
+
+PickPiece.propTypes = {
+  arts: PropTypes.object,
+  onNext: PropTypes.func,
+  onBack: PropTypes.func,
+  onSelect: PropTypes.func,
+  chosenArt: PropTypes.object,
+  chosenPiece: PropTypes.object,
+  stappen: PropTypes.object
 }
 
 export default PickPiece;

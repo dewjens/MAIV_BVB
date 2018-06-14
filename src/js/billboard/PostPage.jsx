@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Afronden = ({posts, onNext}) => {
 
@@ -32,6 +33,11 @@ const Afronden = ({posts, onNext}) => {
       </div>
     </section>
   );
+}
+
+Afronden.propTypes = {
+  posts: PropTypes.object,
+  onNext: PropTypes.func
 }
 
 export default Afronden;

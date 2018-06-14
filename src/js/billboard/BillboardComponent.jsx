@@ -93,6 +93,12 @@ class BillboardComponent extends Component{
   //   this.setState({onboarding:data});
   // }
 
+  componentDidMount() {
+    console.log(this.props.location.pathname);
+
+    this.props.onLoad(this.props.location.pathname);
+  }
+
   handleNext() {
     console.log();
 

@@ -44,9 +44,14 @@ class Poster extends Component {
   }
 
   componentWillMount() {
-
     Ref = firebase.firestore().collection("post");
     this.getRealtimeUpdates();
+  }
+
+  componentDidMount() {
+    console.log(this.props.location.pathname);
+
+    this.props.onLoad(this.props.location.pathname);
   }
 
   render() {
@@ -56,8 +61,8 @@ class Poster extends Component {
       <section className="poster">
 
        <div className="tile-bar">
-        <article className="titlediv">
-          <h2 className="toscan"><h2 class="yellow">collaborative</h2> billboards</h2>
+        <article class="titlediv">
+          <h2 className="toscan"><span class="yellow">collaborative</span> billboards</h2>
           <h3 class="toscansub">by boijmans</h3>
         </article>
       </div>

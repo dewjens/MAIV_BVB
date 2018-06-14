@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const ChooseArt = ({onNext, arts, chosenArt, currentPage, stappen, onBack}) => {
 
@@ -36,6 +36,15 @@ const ChooseArt = ({onNext, arts, chosenArt, currentPage, stappen, onBack}) => {
     </section>
 
   );
+}
+
+ChooseArt.propTypes = {
+  onNext: PropTypes.func,
+  arts: PropTypes.object,
+  chosenArt: PropTypes.number,
+  currentPage: PropTypes.number,
+  stappen: PropTypes.object,
+  onBack: PropTypes.func
 }
 
 export default ChooseArt;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Afronden = ({posts, onNext}) => {
 
@@ -25,13 +26,18 @@ const Afronden = ({posts, onNext}) => {
         <div className="postImageContainer">
           <img src="./assets/img/avatar.png" alt="avatar" className="avatar" width="62" height="62"/>
         </div>
-        <p>Ik heb geholpen met dit kunstwerk aan de bushalte van de stationsstraat!
+        <p className="post">Ik heb geholpen met dit kunstwerk aan de bushalte van de stationsstraat!
           <br/>
           Wil jij ook mee doen? Surf dan naar <span>www.boijmansbillboards.nl</span>
         </p>
       </div>
     </section>
   );
+}
+
+Afronden.propTypes = {
+  posts: PropTypes.object,
+  onNext: PropTypes.func
 }
 
 export default Afronden;

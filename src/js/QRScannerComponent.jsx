@@ -49,9 +49,8 @@ class QRScannerComponent extends Component {
           onError={this.handleError}
           onScan={this.handleScan}
 
-          style={{ width: '50%' }}
+          style={{ width: '100%' }}
           />
-        <a href="www.google.com">{this.state.result}</a>
         </div>
 
         <Footer />

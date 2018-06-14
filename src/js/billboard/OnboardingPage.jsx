@@ -9,7 +9,7 @@ const OnboardingPage = ({onboarding, currentPage, onNext, onBack}) => {
       <img src="./assets/img/boijmans-logo.png" alt="logo"/>
 
       <section>
-        <img src={"./assets/img/onboarding"+currentPage+".png"} alt="onboarding"/>
+        <img className="ongboardingimg" src={"./assets/img/onboarding"+currentPage+".png"} alt="onboarding"/>
         <article className="onboardingtxt">
           <h4>{onboarding[currentPage].title}</h4>
           <p>{onboarding[currentPage].tekst}</p>

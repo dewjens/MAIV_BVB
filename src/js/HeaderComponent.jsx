@@ -41,7 +41,7 @@ class HeaderComponent extends Component {
             </ul>
           </nav>
         <header className={"header-container " + (pathname === "/poster" ? "hidden" : "")}>
-          <Link to="/">
+          <Link className="headerhomelink" to="/">
             <div className="logo-container">
               <img className="header-img" src="./assets/img/logo-header.svg" alt="header-img"/>
               <h1 className="header-title">billboards by boijmans</h1>

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 //import firestore from 'firebase/firestore';
-import Form from '../components/form.js';
+//import Form from '../components/form.js';
 import Draggable from 'react-draggable'; // Both at the same time
 import Afronden from './Afronden.jsx';
+import Facebook from './Facebook.jsx';
+import PostPage from './PostPage.jsx';
+import BedanktPage from './BedanktPage.jsx';
 
 let Ref;
 var config = {
@@ -29,8 +32,10 @@ class ImageApp extends Component {
       }
       ,currentPage: 6
     };
+
     this.getRealtimeUpdates = this.getRealtimeUpdates.bind(this);
     this.onControlledDrag = this.onControlledDrag.bind(this);
+    this.handleNext = this.handleNext.bind(this);
 
   }
 
@@ -79,8 +84,13 @@ class ImageApp extends Component {
     });
 
     Ref.add(Post);
+
+    this.props.onNext();
   }
 
+  handleNext() {
+    this.setState({ currentPage: this.state.currentPage + 1});
+  }
 
   render() {
     const chosenPiece = this.props.arts[this.props.chosenArt].stukken[this.props.chosenPieceNr];
@@ -91,7 +101,19 @@ class ImageApp extends Component {
 
     return (
       <div className="App">
-        
+
+      <div className={"appHeader " + (currentPage===10 ? "hidden" : "")}>
+        <img
+          src="./assets/img/arrow_back.png"
+          alt="back arrow" onClick={this.props.onBack}
+          className="arrowBack"
+        />
+        <h4>{this.props.stappen[this.props.currentPage].title}</h4>
+
+        <div >
+          <p>{(currentPage<7 ? currentPage - 3 : "4")}/4</p>
+        </div>
+      </div>
 
        {(() => {
           switch (currentPage) {
@@ -105,25 +127,32 @@ class ImageApp extends Component {
                     src={"./assets/img/artworks/" + post.name + ".png" 
                 }/>
                 ))}
-      
+
                 <Draggable
                   bounds={'.canvas'}
-      
-                  position={controlledPosition} {...dragHandlers} 
+
+                  position={controlledPosition} {...dragHandlers}
                   onDrag={this.onControlledDrag}
                 >
                   <img alt="kunstwerk" className="kunstwerkimg" draggable="false" src={"./assets/img/artworks/" + chosenPiece.name + ".png"}/>
                 </Draggable>
-              
+
                 <button type="button" className="confirmBtn" onClick={()=>this.handleSubmit(chosenPiece)}></button>
             </div>);
+
             case 7: return (
-              <Afronden posts={this.state.posts}/>);
+              <Afronden posts={this.state.posts} onNext={this.handleNext}/>);
+            case 8: return (
+              <Facebook onNext={this.handleNext} />);
+            case 9: return (
+              <PostPage posts={this.state.posts} onNext={this.handleNext} />);
+            case 10: return (
+              <BedanktPage posts={this.state.posts} onNext={this.handleNext} />);
+
             default: return "oops geen stap";
           }
         })()}
 
- 
       </div>
 
     );

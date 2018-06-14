@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const PickPiece = ({onNext, arts, chosenArt, onSelect, chosenPiece, isSelected}) => {
+const PickPiece = ({onNext, arts, chosenArt, onSelect, chosenPiece, isSelected, currentPage, stappen, onBack}) => {
 
   const selected = false;
 
@@ -39,6 +39,18 @@ const PickPiece = ({onNext, arts, chosenArt, onSelect, chosenPiece, isSelected})
   return (
     <section className="chooseArt">
     {/* {console.log(chosenArt)} */}
+      <div className="appHeader">
+        <img
+          src="./assets/img/arrow_back.png"
+          alt="back arrow" onClick={onBack}
+          className="arrowBack"
+        />
+        <h4>{stappen[currentPage].title}</h4>
+
+        <div className="appHeaderPage">
+          <p>{currentPage - 3 }/4</p>
+        </div>
+      </div>
 
       <article className="artImage" style={backgroundImage}>
         {(Object.keys(chosenArt.stukken).map(id => renderDots(chosenArt.stukken[id], id)))}
@@ -54,7 +66,7 @@ const PickPiece = ({onNext, arts, chosenArt, onSelect, chosenPiece, isSelected})
 
       {console.log(chosenArt.stukken[1])}
     </section>
-    
+
 
   );
 }

@@ -60,7 +60,8 @@ class BillboardComponent extends Component{
         }
       }
 
-      , currentPage: 5, chosenArt: 1, chosenPiece: {}, isSelected: false, chosenPieceNr:1
+      , currentPage: 1, chosenArt: 1, chosenPiece: {}, isSelected: false, chosenPieceNr:1,
+      posts: []
     }
 
     this.handleNext = this.handleNext.bind(this);
@@ -81,7 +82,9 @@ class BillboardComponent extends Component{
   handleNext() {
     console.log();
 
-    this.setState({ currentPage: this.state.currentPage + 1});
+    if(this.state.currentPage<6) {
+      this.setState({ currentPage: this.state.currentPage + 1});
+    }
   }
 
   handleBack() {
@@ -102,41 +105,44 @@ class BillboardComponent extends Component{
   }
 
   render() {
-    const {stappen, currentPage, arts, chosenArt, chosenPiece, isSelected, chosenPieceNr} = this.state;
+    const {stappen, currentPage, arts, chosenArt, chosenPiece, isSelected, chosenPieceNr, posts} = this.state;
     return (
-      // <div>
-      //   {(currentPage >= 4 ? (
-      //     <StartApp 
-      //       currentPage={currentPage} 
-      //       stappen={stappen} 
-      //       onBack={this.handleBack} 
-      //       onNext={this.handleNext} 
-      //       arts={arts} 
-      //       chosenArt={chosenArt} 
-      //       onSelect={this.handleSelect} 
-      //       chosenPiece={chosenPiece} 
-      //       isSelected={isSelected}
-      //     />
-      //   ) : (
-      //     <OnboardingPage 
-      //       onboarding={stappen} 
-      //       currentPage={currentPage} 
-      //       onNext={this.handleNext} 
-      //       onBack={this.handleBack}/>
-      //   ))}
-      // </div>
-      <StartApp 
-        currentPage={currentPage} 
-        stappen={stappen} 
-        onBack={this.handleBack} 
-        onNext={this.handleNext} 
-        arts={arts} 
-        chosenArt={chosenArt} 
-        onSelect={this.handleSelect} 
-        chosenPiece={chosenPiece} 
-        isSelected={isSelected}
-        chosenPieceNr={chosenPieceNr}
-      />
+      <div>
+        {(currentPage >= 4 ? (
+          <StartApp
+            currentPage={currentPage}
+            stappen={stappen}
+            onBack={this.handleBack}
+            onNext={this.handleNext}
+            arts={arts}
+            chosenArt={chosenArt}
+            onSelect={this.handleSelect}
+            chosenPiece={chosenPiece}
+            isSelected={isSelected}
+            chosenPieceNr={chosenPieceNr}
+            posts={posts}
+          />
+        ) : (
+          <OnboardingPage
+            onboarding={stappen}
+            currentPage={currentPage}
+            onNext={this.handleNext}
+            onBack={this.handleBack}/>
+        ))}
+      </div>
+      // <StartApp
+      //   currentPage={currentPage}
+      //   stappen={stappen}
+      //   onBack={this.handleBack}
+      //   onNext={this.handleNext}
+      //   arts={arts}
+      //   chosenArt={chosenArt}
+      //   onSelect={this.handleSelect}
+      //   chosenPiece={chosenPiece}
+      //   isSelected={isSelected}
+      //   chosenPieceNr={chosenPieceNr}
+      //   posts={posts}
+      // />
     );
   }
 }

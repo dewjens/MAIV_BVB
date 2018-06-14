@@ -5,9 +5,9 @@ const StartApp = ({currentPage, onBack, stappen}) => {
 
   return (
       <div className="appHeader">
-        <img 
-          src="./assets/img/arrow_back.png" 
-          alt="back arrow" onClick={onBack} 
+        <img
+          src="./assets/img/arrow_back.png"
+          alt="back arrow" onClick={onBack}
           className="arrowBack"
         />
         <h4>{stappen[currentPage].title}</h4>

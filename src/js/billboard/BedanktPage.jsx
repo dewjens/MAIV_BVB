@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
 
-const Afronden = ({posts, onNext}) => {
+const Afronden = ({posts}) => {
 
   return (
-    <section className="canvasContainer">
+    <section className="postPage">
       {/* <div className="appHeader appHeaderImportant">
         <h4>Afronden en delen!</h4>
 
@@ -13,8 +13,8 @@ const Afronden = ({posts, onNext}) => {
         </div>
       </div> */}
 
-      <div className="canvas">
-        <div className="canvas_smaller">
+      <div className="canvas ">
+        <div className="canvas_bedankt">
           {posts.map((post, i) => (
             <img alt="kunstwerk"
               key={i}
@@ -25,19 +25,20 @@ const Afronden = ({posts, onNext}) => {
           ))}
         </div>
 
-        <div className="afrondenTxt">
-          <h4>Je bent een natuurtalent!</h4>
-          <p>We willen jouw naam nog bij dit kunstwerk zetten zodat iedereen weet dat jij hier aan hebt meegewerkt! </p>
-          <div className="afrondenBtn">
-            <button className="button button_geel" onClick={onNext}>Ja mijn naam mag er bij!</button>
-            <br/>
-            <Link to="/"><p className="secondaryButton">Nee ik wil anoniem blijven</p></Link>
-          </div>
-        </div>
-
       </div>
 
+      <div className="bedanktPageTxt">
+          <h4>Bedankt</h4>
+          <p>Dit kunstwerk zal tentoongesteld worden bij de heropening van het Boijmans van Beuningen museum!</p>
 
+          <p className="bedanktDisclaimer">Je kan ondertussen de afgewerkte kunstwerken bekijken op onze website.</p>
+
+          <div className="afrondenBtn">
+            <Link to="/kunstwerken"><button className="button button_geel bedankt_button" >Bekijk alle kunstwerken</button></Link>
+            <br/>
+            <Link to="/locaties"><p className="secondaryButton">Zoek andere billboards</p></Link>
+          </div>
+      </div>
     </section>
   );
 }

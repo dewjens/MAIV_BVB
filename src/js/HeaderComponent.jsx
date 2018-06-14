@@ -41,8 +41,7 @@ const HeaderComponent = () => {
         </nav>
         </header>
         <Switch>
-          <Route path="/" exact render={() =>  <Home />} />
-
+          <Route path="/" exact render={Home} />
           <Route path="/locaties" component={Locatie} />
           <Route path="/kunstwerken" component={Kunstwerken} />
           <Route path="/qrscanner" component={QRScanner} />

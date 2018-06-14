@@ -118,7 +118,7 @@ class ImageApp extends Component {
        {(() => {
           switch (currentPage) {
             case 6: return(
-              <div className="canvas">
+              <div className="canvas canvas_placing">
                 {this.state.posts.map((post, i) => (
                   <img alt="kunstwerk"
                     key={post.time}

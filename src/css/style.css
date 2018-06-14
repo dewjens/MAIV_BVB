@@ -534,7 +534,6 @@ h3 {
   background-image: url(../assets/img/onboardingbg3.svg);
   background-position: bottom right;
 }
-  
 
 .onboardingtxt {
   position: absolute;
@@ -806,6 +805,12 @@ h3 {
 .bedanktDisclaimer {
   margin-top: 3rem;
   color: #806814;
+}
+
+.canvas_placing {
+  background-image: url(../assets/img/lefttop.svg), url(../assets/img/righttop.svg), url(../assets/img/leftbot.svg), url(../assets/img/rightbot.svg);
+  background-position: 5% 5%, 95% 5%, 5% 75%, 95% 75%;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 1100px) {

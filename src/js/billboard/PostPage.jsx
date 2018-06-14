@@ -4,7 +4,7 @@ const Afronden = ({posts, onNext}) => {
 
   return (
     <section className="postPage">
-      <div className="canvas ">
+      <div className="canvas">
         <div className="canvas_post">
           {posts.map((post, i) => (
             <img alt="kunstwerk"

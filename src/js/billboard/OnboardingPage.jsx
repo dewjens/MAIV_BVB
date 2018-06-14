@@ -10,8 +10,8 @@ const OnboardingPage = ({onboarding, currentPage, onNext, onBack}) => {
       <img className="animation" src="./assets/img/boijmans-logo.png" alt="logo"/>
 
       <section>
-        <img className="animation" src={"./assets/img/onboarding"+currentPage+".png"} alt="onboarding"/>
-        <article className="onboardingtxt animation">
+        <img className="ongboardingimg" src={"./assets/img/onboarding"+currentPage+".png"} alt="onboarding"/>
+        <article className="onboardingtxt">
           <h4>{onboarding[currentPage].title}</h4>
           <p>{onboarding[currentPage].tekst}</p>
         </article>

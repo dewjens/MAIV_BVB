@@ -7,6 +7,7 @@ import Info from './InfoComponent.jsx';
 import Home from './HomeComponent.jsx';
 import BillboardComponent from './billboard/BillboardComponent.jsx';
 import Poster from './Poster2.jsx';
+import NotFound from './NotFound.jsx';
 
 
 class HeaderComponent extends Component {
@@ -68,6 +69,8 @@ class HeaderComponent extends Component {
             <Route path="/billboard" render={(props) =>  <BillboardComponent {...props} onLoad={this.handleLoad} />}/>
 
             <Route path="/poster" render={(props) =>  <Poster {...props} onLoad={this.handleLoad} />}/>
+
+            <Route component={NotFound} />
           </Switch>
         </header>
       </HashRouter>

@@ -4,9 +4,9 @@ import Kunstwerk from './Kunstwerk.jsx';
 import Footer from './FooterComponent.jsx';
 
 const InfoComponent = () => {
+
   return (
       <div className="homeContainer">
-
         <section className="header width">
           <article className="headertxt txt">
             <h2>Hoe bedoel je: "kunst is gaar"?</h2>

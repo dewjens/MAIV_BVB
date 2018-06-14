@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const OnboardingPage = ({onboarding, currentPage, onNext, onBack}) => {
 
   return (
     <div className={"onboarding onboarding" + currentPage}>
       <img src="./assets/img/arrow_back.png" alt="back arrow" className={"arrowBack" + (currentPage===1 ? " hidden" : "")} onClick={onBack}/>
-      <img src="./assets/img/boijmans-logo.png" alt="logo"/>
+      <img className="animation" src="./assets/img/boijmans-logo.png" alt="logo"/>
 
       <section>
         <img className="ongboardingimg" src={"./assets/img/onboarding"+currentPage+".png"} alt="onboarding"/>
@@ -17,12 +18,19 @@ const OnboardingPage = ({onboarding, currentPage, onNext, onBack}) => {
       </section>
 
       <section className="onboardingBottom">
-        <Link to="/billboard" className="onboardingSkip">skip</Link>
-        <p>{currentPage}/3</p>
-        <img src="./assets/img/next.svg" alt="next" onClick={onNext}/>
+        <Link to="/billboard" className="onboardingSkip animation">skip</Link>
+        <p className="animation">{currentPage}/3</p>
+        <img className="animation" src="./assets/img/next.svg" alt="next" onClick={onNext}/>
       </section>
     </div>
   );
+}
+
+OnboardingPage.propTypes = {
+  onboarding: PropTypes.object,
+  currentPage: PropTypes.number,
+  onNext: PropTypes.func,
+  onBack: PropTypes.func
 }
 
 export default OnboardingPage;

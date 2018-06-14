@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const StartApp = ({currentPage, onBack, stappen}) => {
 
@@ -18,6 +18,12 @@ const StartApp = ({currentPage, onBack, stappen}) => {
       </div>
 
   );
+}
+
+StartApp.propTypes = {
+  currentPage: PropTypes.number,
+  onBack: PropTypes.func,
+  stappen: PropTypes.object
 }
 
 export default StartApp;

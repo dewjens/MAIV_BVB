@@ -19,7 +19,7 @@ const Afronden = ({posts, onNext}) => {
             <img alt="kunstwerk"
               key={i}
               className="kunstwerkimg"
-              style={{transform: `translate(${post.x}px, ${post.y}px) `, "opacity": 1}}
+              style={{transform: `translate(${post.x}px, ${post.y}px)`, "opacity": 1}}
               src={"./assets/img/artworks/" + post.name + ".png"
           }/>
           ))}

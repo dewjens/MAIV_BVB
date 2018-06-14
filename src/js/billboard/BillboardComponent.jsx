@@ -52,9 +52,23 @@ class BillboardComponent extends Component{
             "2": {
               "id": 2,
               "name": "hond",
-              "info": "hoofd van een hond",
+              "info": "Een jachthond, blijkbaar gaat het om jachtgezelschap.",
               "x": 120,
               "y": 320
+            },
+            "3": {
+              "id": 3,
+              "name": "laars",
+              "info": "De laars van deze man.",
+              "x": 320,
+              "y": 360
+            },
+            "4": {
+              "id": 4,
+              "name": "hoed",
+              "info": "De hoed van deze man.",
+              "x": 10,
+              "y": 230
             }
           }
         }

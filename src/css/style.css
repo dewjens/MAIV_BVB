@@ -534,6 +534,7 @@ h3 {
   background-image: url(../assets/img/onboardingbg3.svg);
   background-position: bottom right;
 }
+  
 
 .onboardingtxt {
   position: absolute;
@@ -643,7 +644,7 @@ h3 {
 
 .canvas_smaller {
   position: relative;
-  top: 0;
+  top: -10rem;
   height: 60vh;
   transform: scale(.7, .7);
 }

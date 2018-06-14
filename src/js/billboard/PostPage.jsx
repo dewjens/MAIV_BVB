@@ -4,14 +4,6 @@ const Afronden = ({posts, onNext}) => {
 
   return (
     <section className="postPage">
-      {/* <div className="appHeader appHeaderImportant">
-        <h4>Afronden en delen!</h4>
-
-        <div className="appHeaderPage">
-          <p>4/4</p>
-        </div>
-      </div> */}
-
       <div className="canvas ">
         <div className="canvas_post">
           {posts.map((post, i) => (
@@ -35,7 +27,7 @@ const Afronden = ({posts, onNext}) => {
         </div>
         <p>Ik heb geholpen met dit kunstwerk aan de bushalte van de stationsstraat!
           <br/>
-          Wil jij ook mee doen? Surf dan naar www.boijmansbillboards.nl
+          Wil jij ook mee doen? Surf dan naar <span>www.boijmansbillboards.nl</span>
         </p>
       </div>
     </section>

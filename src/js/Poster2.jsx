@@ -67,7 +67,7 @@ class Poster extends Component {
         </article>
       </div>
       <div className="center-canvas">
-         <div className="canvas">
+         <div className="canvas_poster_container">
           <div className="canvas_poster">
             {posts.map((post, i) => (
               <img alt="kunstwerk"

@@ -732,12 +732,7 @@ h3 {
   border: 3rem solid black;
 }
 
-.canvas_poster {
-  border-radius: 3px solid red;
-}
-
 .center-canvas {
-  border: 2px solid red;
   display: flex;
   justify-content: center;
   height: 100%;
@@ -1149,5 +1144,24 @@ h3 {
     display: flex;
     flex-direction: column;
     height: 80rem;
+  }
+}
+
+/*ANIMATION*/
+
+.animation {
+  animation: upcoming .75s;
+}
+
+@keyframes upcoming {
+
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

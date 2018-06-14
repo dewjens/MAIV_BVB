@@ -1,0 +1,6 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0V28" transform="translate(29 1) rotate(90)" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M28 0H0" transform="translate(1 1) rotate(90)" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M0 0V22.4865" transform="translate(28.541 6.05371) rotate(90)" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M22.4865 0H0" transform="translate(6.05371 6.05371) rotate(90)" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+</svg>

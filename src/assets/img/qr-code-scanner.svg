@@ -1,0 +1,12 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="21" cy="21" r="21" fill="#FFD952"/>
+<path d="M0 9.25631H9.25592V-3.09184e-08H0V9.25631ZM1.85104 1.8514H7.40468V7.39082H1.85104V1.8514Z" transform="translate(11 21.2891)" fill="black"/>
+<path d="M1.85114 0H0V1.85145H1.85114V0Z" transform="translate(14.7031 24.9922)" fill="black"/>
+<path d="M1.8516 0H0V1.85125H1.8516V0Z" transform="translate(25.8086 28.6943)" fill="black"/>
+<path d="M1.85155 0H0V1.85125H1.85155V0Z" transform="translate(29.5117 28.6943)" fill="black"/>
+<path d="M7.40483 1.8514H5.55379V-3.09184e-08H-3.09175e-08V9.25631H1.85135V3.7025H3.70224V5.55396H9.25603V-3.09184e-08H7.40483V1.8514Z" transform="translate(22.1074 21.2891)" fill="black"/>
+<path d="M0 9.25641H9.25592V0H0V9.25641ZM1.85104 1.8511H7.40468V7.40491H1.85104V1.8511Z" transform="translate(11 10.1816)" fill="black"/>
+<path d="M1.85114 0H0V1.85135H1.85114V0Z" transform="translate(14.7031 13.8848)" fill="black"/>
+<path d="M-3.09175e-08 0V9.25641H9.25618V0H-3.09175e-08ZM7.40483 7.40491H1.85135V1.8511H7.40483V7.40491Z" transform="translate(22.1074 10.1816)" fill="black"/>
+<path d="M1.8516 0H0V1.85135H1.8516V0Z" transform="translate(25.8086 13.8848)" fill="black"/>
+</svg>

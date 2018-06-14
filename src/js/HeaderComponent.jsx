@@ -4,9 +4,9 @@ import Locatie from './LocatieComponent.jsx';
 import Kunstwerken from './KunstwerkenComponent.jsx';
 import QRScanner from './QRScannerComponent.jsx';
 import Info from './InfoComponent.jsx';
-import Home from './HomeComponent.jsx'
-import BillboardComponent from './billboard/BillboardComponent.jsx'
-import Bedankt from './billboard/BedanktPage.jsx'
+import Home from './HomeComponent.jsx';
+import BillboardComponent from './billboard/BillboardComponent.jsx';
+import Poster from './Poster2.jsx';
 
 
 const HeaderComponent = () => {
@@ -51,7 +51,7 @@ const HeaderComponent = () => {
             path="/billboard" component={BillboardComponent}
           />
 
-          <Route path="/bedankt" component={Bedankt} />
+          <Route path="/poster" component={Poster} />
         </Switch>
       </header>
     </HashRouter>

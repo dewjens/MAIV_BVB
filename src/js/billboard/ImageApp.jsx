@@ -98,8 +98,8 @@ class ImageApp extends Component {
             case 6: return(
               <div className="canvas">
                 {this.state.posts.map((post, i) => (
-                  <img alt="kunstwerk" 
-                    key={i} 
+                  <img alt="kunstwerk"
+                    key={post.time}
                     className="kunstwerkimg"
                     style={{transform: `translate(${post.x}px, ${post.y}px)`, "opacity": .5}}
                     src={"./assets/img/artworks/" + post.name + ".png" 

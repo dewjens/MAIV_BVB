@@ -13,7 +13,7 @@ const Kunstwerk = () => {
 
         <p className="kunstwerkName">Paard van je moeder</p>
 
-        <a href="#" className="button kunstwerk_button">Bekijken</a>
+        <a className="button kunstwerk_button">Bekijken</a>
     </article>
 
   );

@@ -6,7 +6,6 @@ class Store {
     onboardingPages = [];
 
     constructor(){
-        this.addPost(new Onboard( ));
     }
 
 }

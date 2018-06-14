@@ -17,20 +17,19 @@ const PickPiece = ({onNext, arts, chosenArt, onSelect, chosenPiece, isSelected})
   const renderDots = (stuk, id) => {
 
     return (
-      
-      <div 
+      <div
         key={id}
-        className="pieceDot" 
+        className="pieceDot"
         style={{left: stuk.x, top: stuk.y}}
         onClick={()=>handleSelect(stuk, stuk.id)}
-      ></div>
+      >{console.log(id)}</div>
     );
   }
 
   const renderDetail = (stuk, id) => {
 
     return (
-      <div>
+      <div key={id}>
         <p>{stuk.info}</p>
         <img src="./assets/img/confirm.svg" alt="confirm" className="check" onClick={onNext} />
       </div>

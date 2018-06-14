@@ -44,9 +44,14 @@ class Poster extends Component {
   }
 
   componentWillMount() {
-
     Ref = firebase.firestore().collection("post");
     this.getRealtimeUpdates();
+  }
+
+  componentDidMount() {
+    console.log(this.props.location.pathname);
+
+    this.props.onLoad(this.props.location.pathname);
   }
 
   render() {

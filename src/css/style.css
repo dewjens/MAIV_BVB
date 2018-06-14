@@ -18,6 +18,10 @@ body {
   color: var(--text-color);
 }
 
+.hidden {
+  display: none;
+}
+
 /*HEADER*/
 
 .header-container {
@@ -67,11 +71,36 @@ body {
   font-weight: bold;
 }
 
+.kunstwerkimg {
+  width: 12rem;
+  height: auto;
+  position: absolute;
+}
+
 .black-stroke {
   height: 100%;
   width: .5rem;
   background-color: black;
   margin-right: -2rem;
+}
+
+.confirmBtn {
+  border: none;
+  background-image: url('../assets/img/confirm.svg');
+  background-size: cover;
+  border-radius: 20rem;
+  height: 7rem;
+  width: 7rem;
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: none;
+  outline: none;
 }
 
 .link-1 {
@@ -496,6 +525,341 @@ h3 {
   margin-left: 2rem;
 }
 
+/* QRREADER */
+
+.qrreader {
+  display: none;
+}
+
+/* APP */
+
+.onboarding {
+  text-align: center;
+  background-color: var(--main-color);
+  height: 100vh;
+  position: relative;
+  padding-top: 1rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+
+  & h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  & p {
+    padding: 0 3vw;
+  }
+}
+
+.onboarding1 {
+  background-image: url(../assets/img/onboardingbg1.svg);
+  background-position: bottom left;
+}
+
+.onboarding2 {
+  background-image: url(../assets/img/onboardingbg2.svg);
+  background-position: top left;
+}
+
+.onboarding3 {
+  background-image: url(../assets/img/onboardingbg3.svg);
+  background-position: bottom right;
+}
+
+.onboardingtxt {
+  position: absolute;
+  bottom: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.onboardingSkip {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.onboardingBottom {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  width: 100vw;
+  position: absolute;
+  bottom: 20vh;
+}
+
+.arrowBack {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+}
+
+.appHeader {
+  background-color: var(--main-color);
+  padding: 2rem .5rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.appHeaderPage {
+  margin-top: .5rem;
+}
+
+.appContainer {
+  overflow: hidden;
+  background-color: #f9f7f4;
+  height: 100vh;
+}
+
+.appTxt {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.artImage {
+  height: 60vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: -15rem 0;
+  position: relative;
+}
+
+.artName {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.check {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: -45%;
+}
+
+.pieceDot {
+  height: 2rem;
+  width: 2rem;
+  background-color: white;
+  position: absolute;
+  border-radius: 5rem;
+}
+
+.dotSelected {
+  background-color: var(--main-color);
+}
+
+.pieceDot:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.canvas {
+  width: 100%;
+  height: 90vh;
+  background-color: grey;
+  z-index: 1;
+}
+
+.canvasContainer {
+  position: relative;
+}
+
+.canvas_smaller {
+  position: relative;
+  top: -10rem;
+  height: 60vh;
+  transform: scale(.7, .7);
+}
+
+.afrondenTxt {
+  text-align: center;
+  z-index: 2;
+  bottom: 15rem;
+  position: absolute;
+
+  & h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.postenTxt {
+  display: flex;
+  align-items: center;
+
+  & img {
+    margin-right: 1rem;
+  }
+}
+
+.afrondenBtn {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.secondaryButton {
+  color: black;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.facebookContainer {
+  text-align: center;
+
+  & header {
+    background-color: #3a5998;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  & img {
+    width: 5rem;
+  }
+}
+
+.facebookTxt {
+  margin-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.button_fb {
+  background-color: #4080fe;
+  color: white;
+}
+
+.facebookDisclaimer {
+  color: var(--text-grey);
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.postPage {
+  text-align: center;
+}
+
+.buttonContainer {
+  width: 90vw;
+  position: absolute;
+  text-align: center;
+  top: -7rem;
+}
+
+.postPageTxt {
+  display: flex;
+  text-align: left;
+  padding: 4rem 2rem 2rem;
+  position: absolute;
+  background-color: #f9f7f4;
+  border-top: .3rem solid var(--main-color);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  bottom: 5rem;
+  z-index: 5;
+
+  & button {
+    left: 0;
+    right: 0;
+    border: .4rem solid #f9f7f4;
+  }
+}
+
+.postImageContainer {
+  width: 6.2rem;
+  height: auto;
+  margin-right: 2rem;
+}
+
+.avatar {
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+
+.canvasLogo {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.canvas_post {
+  transform: scale(.7, .7);
+  width: 100%;
+  height: 100%;
+  margin-left: -15rem;
+}
+
+.canvas_bedankt {
+  transform: scale(.5, .5);
+  width: 100%;
+  height: 100%;
+  margin-left: -10rem;
+  margin-top: -15rem;
+}
+
+.bedanktPageTxt {
+  text-align: center;
+  padding: 0 2rem 2rem;
+  position: absolute;
+  background-color: var(--main-color);
+  margin-bottom: 5rem;
+  bottom: 5rem;
+  z-index: 5;
+  width: 100%;
+
+  & h4 {
+    font-family: mexcellent;
+    font-size: 5rem;
+    background-color: black;
+    color: white;
+    padding: 1rem 5rem;
+    display: inline-block;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.bedankt_button {
+  border: .3rem solid white;
+  margin-bottom: 3rem;
+}
+
+.bedanktDisclaimer {
+  margin-top: 3rem;
+  color: #806814;
+}
+
+.canvas_placing {
+  background-image: url(../assets/img/lefttop.svg), url(../assets/img/righttop.svg), url(../assets/img/leftbot.svg), url(../assets/img/rightbot.svg);
+  background-position: 5% 5%, 95% 5%, 5% 75%, 95% 75%;
+  background-repeat: no-repeat;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.map-center {
+  display: flex;
+  justify-content: center;
+}
+
+
 @media (max-width: 1100px) {
 
   .headerpicture {
@@ -644,6 +1008,10 @@ h3 {
 
   .header {
     margin-top: 0;
+  }
+
+  .qrreader {
+    display: block;
   }
 
   .nav-li {

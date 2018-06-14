@@ -62,7 +62,7 @@ class Poster extends Component {
 
        <div className="tile-bar">
         <article class="titlediv">
-          <h2 className="toscan"><h2 class="yellow">collaborative</h2> billboards</h2>
+          <h2 className="toscan"><span class="yellow">collaborative</span> billboards</h2>
           <h3 class="toscansub">by boijmans</h3>
         </article>
       </div>

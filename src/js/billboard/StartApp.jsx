@@ -3,6 +3,7 @@ import React from 'react';
 import ChooseArt from './ChooseArt.jsx';
 import PickPiece from './PickPiece.jsx';
 import ImageApp from './ImageApp.jsx';
+import PropTypes from 'prop-types';
 
 const StartApp = ({currentPage, onBack, onNext, stappen, arts, chosenArt, onSelect, chosenPiece, isSelected, chosenPieceNr, posts}) => {
   return (
@@ -47,6 +48,20 @@ const StartApp = ({currentPage, onBack, onNext, stappen, arts, chosenArt, onSele
       </div>
 
   );
+}
+
+PickPiece.propTypes = {
+  currentPage: PropTypes.number,
+  onNext: PropTypes.func,
+  onBack: PropTypes.func,
+  onSelect: PropTypes.func,
+  arts: PropTypes.object,
+  chosenArt: PropTypes.object,
+  chosenPiece: PropTypes.object,
+  stappen: PropTypes.object,
+  isSelected: PropTypes.bool,
+  chosenPieceNr: PropTypes.number,
+  posts: PropTypes.object
 }
 
 export default StartApp;

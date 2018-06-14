@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link } from 'react-router-dom'
+import {Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Facebook = ({onNext}) => {
 
@@ -18,6 +19,10 @@ const Facebook = ({onNext}) => {
 
     </section>
   );
+}
+
+Facebook.propTypes = {
+  onNext: PropTypes.func
 }
 
 export default Facebook;

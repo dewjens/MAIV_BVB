@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Afronden = ({posts, onNext}) => {
 
@@ -40,6 +41,11 @@ const Afronden = ({posts, onNext}) => {
 
     </section>
   );
+}
+
+Afronden.propTypes = {
+  posts: PropTypes.object,
+  onNext: PropTypes.func
 }
 
 export default Afronden;

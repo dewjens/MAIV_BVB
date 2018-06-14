@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const OnboardingPage = ({onboarding, currentPage, onNext, onBack}) => {
 
@@ -23,6 +24,13 @@ const OnboardingPage = ({onboarding, currentPage, onNext, onBack}) => {
       </section>
     </div>
   );
+}
+
+OnboardingPage.propTypes = {
+  onboarding: PropTypes.object,
+  currentPage: PropTypes.number,
+  onNext: PropTypes.func,
+  onBack: PropTypes.func
 }
 
 export default OnboardingPage;

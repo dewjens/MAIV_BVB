@@ -321,7 +321,6 @@ h3 {
 .scanpicture {
   width: 45.5rem;
   height: 42.2rem;
-  z-index: -1;
   position: absolute;
 
   & img {

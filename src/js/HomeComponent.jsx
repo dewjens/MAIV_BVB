@@ -30,13 +30,9 @@ const InfoComponent = () => {
           <p className="howTo">Hoe ga je te werk?</p>
 
           <article className="scanBillboardtxt txt">
-            <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750}>
               <h3 className="title_black">Scan een van onze billboards</h3>
-            </Anime>
-
-            <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750} delay={200}>
               <p>Hoe doe je mee? Onze billboards staan verspreid over de hele stad. <span className="highlight"> Op ieder billboard staat een QR-code die gescanned kan worden </span> met jouw telefoon. Heb je geen QR-scanner? Surf dan naar ... om direct te beginnen!</p>
-            </Anime>
+
 
               <Link className="button button_geel" to="/qrscanner">
 
@@ -44,11 +40,9 @@ const InfoComponent = () => {
              </Link>
 
           </article>
-          <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750}>
           <picture className="scanpicture">
             <img  className="kunststukje-img scan-img" src="./assets/img/scanimg.png" alt="scan een qr code"/>
           </picture>
-        </Anime>
         </section>
 
         <section className="kiesKunststuk width">
@@ -57,9 +51,7 @@ const InfoComponent = () => {
           </picture>
 
           <article className="kunststuk txt">
-            <Anime translateY={[500, 0]} easing={"easeOutQuad"} duration={750}>
             <h3 className="title_geel">kies je kunststuk</h3>
-          </Anime>
             <p>Van de 150.000 kunstwerken van Museum Boijmans van Beuningen worden er <span className="highlightblack">drie willekeurig aan jou voorgeschoteld. </span> Daar mag jij één van kiezen waar je mee gaat werken om een tof kunstwerk te maken.</p>
           </article>
         </section>

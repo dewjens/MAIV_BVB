@@ -1,0 +1,65 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rotterdam centraal station",
+        "adress": "Stationsplein 1, 3013 AJ, Rotterdam"
+      },
+      "geometry": {
+        "coordinates": [
+          4.469567,
+          51.924104
+        ],
+        "type": "Point"
+      },
+      "id": "2d2224d393b2f3d45671d72248a8c592"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Witte de With",
+        "adress": "Witte de Withstraat 44, 3012 BR Rotterdam"
+      },
+      "geometry": {
+        "coordinates": [
+          4.476693,
+          51.915501
+        ],
+        "type": "Point"
+      },
+      "id": "51c33a96847263245d5aa7a08f319e2b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Boijmans Van Beuningen Museum",
+        "adress": "Museumpark 18, 3015 CX Rotterdam"
+      },
+      "geometry": {
+        "coordinates": [
+          4.471954,
+          51.914362
+        ],
+        "type": "Point"
+      },
+      "id": "974cce8e527a92af525cf9c5a4240018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rotterdam centraal station",
+        "adress": "Stationsplein 1, 3013 AJ, Rotterdam"
+      },
+      "geometry": {
+        "coordinates": [
+          4.469341,
+          51.925932
+        ],
+        "type": "Point"
+      },
+      "id": "aac1883e43032bf3ee637965363cddf4"
+    }
+  ],
+  "type": "FeatureCollection"
+}

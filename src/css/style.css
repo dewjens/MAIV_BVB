@@ -426,7 +426,6 @@ h3 {
 .kunstwerken {
   margin-top: 5rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -460,7 +459,6 @@ h3 {
   padding: 1rem 2rem;
   border: .5rem solid white;
 }
-
 
 .desktop-container {
   display: flex;
@@ -504,6 +502,17 @@ h3 {
   display: none;
 }
 
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.map-center {
+  display: flex;
+  justify-content: center;
+}
 
 @media (max-width: 1100px) {
 

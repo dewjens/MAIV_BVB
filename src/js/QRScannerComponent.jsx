@@ -38,7 +38,7 @@ class QRScannerComponent extends Component {
                 <p className="qr-text">bezoek deze pagina voor de volledige beleving</p>
                 <p className="qr-text">pak je telefoon en scan deze qr-code</p>
               </div>
-              <img src="./assets/img/qr-code.png" alt="qr code" width="143px" height="143px" />
+              <img src="./assets/img/qr-code.png" className="qrpade-code" alt="qr code" width="143px" height="143px" />
 
             </div>
           </div>
